@@ -21,22 +21,37 @@ body{
     color:#fff;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER PRO ===== */
 .header{
     position:fixed;
     top:0;
     width:100%;
-    height:70px;
+    height:90px;
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    padding:10px 30px;
-    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
     z-index:1000;
 }
 
+/* LOGO */
 .logo img{
-    width:200px;
+    height:70px;
+    width:auto;
+}
+
+/* MENU */
+.nav{
+    position:absolute;
+    right:30px;
+}
+
+.nav a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:14px;
 }
 
 /* ===== PORTADA ===== */
@@ -48,7 +63,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:70px;
+    padding-top:90px;
 }
 
 .overlay{
@@ -58,7 +73,7 @@ body{
     text-align:center;
 }
 
-/* ===== SECCION SIGUIENTE ===== */
+/* ===== SECCION ===== */
 .seccion{
     display:flex;
     min-height:100vh;
@@ -96,17 +111,13 @@ body{
     transform:translateX(5px);
 }
 
-/* ===== CONTENIDO ===== */
+/* CONTENIDO */
 .contenido{
     flex:1;
     padding:40px;
 }
 
-.contenido h2{
-    margin-bottom:20px;
-}
-
-/* ===== WHATSAPP ===== */
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:15px;
@@ -122,8 +133,16 @@ body{
     color:white;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width:768px){
+
+    .nav{
+        display:none;
+    }
+
+    .logo img{
+        height:50px;
+    }
 
     .seccion{
         flex-direction:column;
@@ -146,12 +165,21 @@ body{
 
 <!-- HEADER -->
 <header class="header">
+
     <div class="logo">
-        <img src="logo.png">
+        <img src="logo.png" alt="Cubanos Sin Fronteras">
     </div>
+
+    <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Noticias</a>
+        <a href="#">Contacto</a>
+    </nav>
+
 </header>
 
-<!-- PORTADA (NO TOCAR) -->
+<!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
         <h2>Conectando cubanos en Brasil</h2>
@@ -159,7 +187,7 @@ body{
     </div>
 </section>
 
-<!-- SECCION SIGUIENTE (AQUI VA EL MENU) -->
+<!-- SECCION SIGUIENTE -->
 <section class="seccion">
 
     <!-- MENU IZQUIERDO -->
