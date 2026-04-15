@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cubanos en Brasil</title>
+<title>Cubanos Sin Fronteras</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -53,35 +53,30 @@ body{
     max-width:700px;
 }
 
-/* TITULO PRO */
 .overlay h2{
     font-size:38px;
-    font-weight:700;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.8),
-                 0 0 10px rgba(56,189,248,0.6);
+    text-shadow:0 4px 20px rgba(0,0,0,0.8),
+                0 0 10px rgba(56,189,248,0.6);
 }
 
-/* VERIFICACION */
 .check{
     color:#38bdf8;
-    text-shadow:0 0 8px rgba(56,189,248,0.8);
 }
 
-/* TEXTO */
 .overlay p{
     margin-top:15px;
     font-size:18px;
-    opacity:0.9;
 }
 
 /* SECCION */
 .seccion{
     display:flex;
+    justify-content:space-between;
     padding:30px;
-    gap:30px;
+    gap:20px;
 }
 
-/* MENU */
+/* MENU IZQUIERDO */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -99,11 +94,6 @@ body{
     align-items:center;
     gap:10px;
     cursor:pointer;
-    transition:0.3s;
-}
-
-.card:hover{
-    background:#334155;
 }
 
 .card i{
@@ -114,7 +104,20 @@ body{
 .contenido{
     flex:1;
     padding:20px;
-    max-width:800px;
+}
+
+/* PUBLICIDAD DERECHA */
+.publicidad{
+    width:260px;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+}
+
+.publicidad img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* WHATSAPP */
@@ -131,7 +134,6 @@ body{
     justify-content:center;
     font-size:26px;
     color:white;
-    text-decoration:none;
 }
 
 /* MOBILE */
@@ -141,26 +143,13 @@ body{
         height:180px;
     }
 
-    .overlay h2{
-        font-size:24px;
-    }
-
-    .overlay p{
-        font-size:14px;
-    }
-
     .seccion{
         flex-direction:column;
     }
 
-    .menu-izquierdo{
+    .publicidad{
         width:100%;
-        flex-direction:row;
-        overflow-x:auto;
-    }
-
-    .card span{
-        display:none;
+        justify-content:center;
     }
 }
 </style>
@@ -170,42 +159,42 @@ body{
 
 <!-- LOGO -->
 <div class="logo">
-    <img src="logo.png" alt="Cubanos Sin Fronteras">
+    <img src="logo.png">
 </div>
 
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>
-            🌎 Cubanos en Brasil 
-            <span class="check">✔️ Sitio Oficial</span>
-        </h2>
-        <p>
-            Tu punto de encuentro en Brasil  
-            Servicios, empleo, noticias y comunidad cubana en un solo lugar.
-        </p>
+        <h2>🌎 Cubanos en Brasil <span class="check">✔️ Sitio Oficial</span></h2>
+        <p>Servicios, empleo, noticias y comunidad cubana en un solo lugar.</p>
     </div>
 </section>
 
 <!-- SECCION -->
 <section class="seccion">
 
+    <!-- MENU -->
     <div class="menu-izquierdo">
-        <div class="card"><i class="fas fa-box"></i><span>Envíos de Paquetes a Cuba</span></div>
-        <div class="card"><i class="fas fa-money-bill-wave"></i><span>Envios de Remesas</span></div>
-        <div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
-        <div class="card"><i class="fas fa-graduation-cap"></i><span>Cursos online</span></div>
-        <div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
-        <div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
-        <div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
+        <div class="card"><i class="fas fa-box"></i> Envíos a Cuba</div>
+        <div class="card"><i class="fas fa-money-bill-wave"></i> Recargas Cuba</div>
+        <div class="card"><i class="fas fa-briefcase"></i> Ofertas de trabajo</div>
+        <div class="card"><i class="fas fa-graduation-cap"></i> Cursos online</div>
+        <div class="card"><i class="fas fa-newspaper"></i> Noticias</div>
+        <div class="card"><i class="fas fa-language"></i> Traductor juramentado</div>
+        <div class="card"><i class="fas fa-store"></i> Negocios en tu región</div>
     </div>
 
+    <!-- CONTENIDO -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
         <p>
-            Aquí puedes colocar la descripción de tu sitio, explicar los servicios, 
-            añadir anuncios o cualquier información importante para tus usuarios.
+            Aquí puedes colocar la descripción de tu sitio, servicios o anuncios.
         </p>
+    </div>
+
+    <!-- PUBLICIDAD DERECHA -->
+    <div class="publicidad">
+        <img src="anuncia tu negocio.png" alt="Publicidad">
     </div>
 
 </section>
