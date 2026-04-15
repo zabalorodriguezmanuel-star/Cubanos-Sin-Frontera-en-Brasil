@@ -21,7 +21,7 @@ body{
     color:#fff;
 }
 
-/* ===== LOGO ===== */
+/* LOGO */
 .logo{
     position:absolute;
     top:80px;
@@ -31,10 +31,9 @@ body{
 
 .logo img{
     height:300px;
-    width:auto;
 }
 
-/* ===== PORTADA ===== */
+/* PORTADA */
 .brasil{
     width:100%;
     height:100vh;
@@ -45,7 +44,6 @@ body{
     justify-content:center;
 }
 
-/* TEXTO */
 .overlay{
     background:rgba(0,0,0,0.6);
     padding:25px;
@@ -53,10 +51,11 @@ body{
     text-align:center;
 }
 
-/* ===== SECCION ===== */
+/* SECCION */
 .seccion{
     display:flex;
-    min-height:100vh;
+    padding:30px;
+    gap:30px;
 }
 
 /* MENU IZQUIERDO */
@@ -69,6 +68,7 @@ body{
     gap:15px;
 }
 
+/* BOTONES */
 .card{
     background:#1e293b;
     padding:12px;
@@ -83,10 +83,15 @@ body{
     color:#38bdf8;
 }
 
-/* CONTENIDO */
+/* CONTENIDO DERECHA */
 .contenido{
     flex:1;
-    padding:40px;
+    padding:20px;
+    max-width:800px; /* 👈 controla ancho del texto */
+}
+
+.contenido h2{
+    margin-bottom:15px;
 }
 
 /* WHATSAPP */
@@ -107,6 +112,7 @@ body{
 
 /* MOBILE */
 @media (max-width:768px){
+
     .logo img{
         height:180px;
     }
@@ -132,7 +138,7 @@ body{
 
 <!-- LOGO -->
 <div class="logo">
-    <img src="logo.png" alt="Cubanos Sin Fronteras">
+    <img src="logo.png">
 </div>
 
 <!-- PORTADA -->
@@ -146,6 +152,7 @@ body{
 <!-- SECCION -->
 <section class="seccion">
 
+    <!-- MENU IZQUIERDO (SE QUEDA IGUAL) -->
     <div class="menu-izquierdo">
 
         <div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
@@ -158,9 +165,13 @@ body{
 
     </div>
 
+    <!-- CONTENIDO (A LA DERECHA) -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
-        <p>Aquí puedes colocar información.</p>
+        <p>
+            Aquí puedes colocar la descripción de tu sitio, explicar los servicios, 
+            poner anuncios o cualquier información importante para los usuarios.
+        </p>
     </div>
 
 </section>
