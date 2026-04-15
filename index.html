@@ -1,4 +1,4 @@
-v<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -13,35 +13,34 @@ body{
     color:white;
 }
 
-/* HEADER FULL */
+/* ===== BANNER REAL FULL ===== */
 .header{
     width:100%;
+    height:120px;
     background:black;
-    padding:10px 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .header img{
-    width:100%;
-    max-height:140px;
-    object-fit:contain;
+    height:90px;
 }
 
-/* CONTENEDOR */
+/* ===== ESTRUCTURA ===== */
 .main{
     display:flex;
 }
 
-/* SIDEBAR */
+/* ===== MENU PEGADO IZQUIERDA ===== */
 .sidebar{
     width:260px;
-    padding:20px;
+    padding:20px 10px; /* MENOS ESPACIO IZQUIERDA */
 }
 
-/* BOTONES */
+/* ===== BOTONES ===== */
 .btn{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    display:block;
     margin-bottom:15px;
     padding:12px;
     border-radius:8px;
@@ -54,38 +53,31 @@ body{
 
 .btn:hover{
     transform:scale(1.05);
-    box-shadow:0 0 10px rgba(0,255,200,0.8);
 }
 
-/* CONTENIDO */
+/* ===== CONTENIDO BIEN SEPARADO ===== */
 .content{
     flex:1;
-    padding:40px 60px; /* MÁS ESPACIO */
-    text-align:center;
+    padding:80px 100px; /* MÁS SEPARADO */
 }
 
-/* CAJA QUIENES SOMOS */
+/* ===== QUIENES SOMOS ===== */
 .box{
     background: rgba(0,0,0,0.6);
-    padding:25px;
+    padding:30px;
     border-radius:12px;
-    display:inline-block;
     max-width:500px;
 }
 
-/* PAGINAS INTERNAS */
+/* ===== OCULTOS ===== */
 .hidden{
     display:none;
 }
 
-/* BOTON VOLVER */
-.back{
-    margin-bottom:20px;
+button{
     padding:10px 20px;
     border:none;
     border-radius:6px;
-    background:white;
-    color:black;
     cursor:pointer;
 }
 </style>
@@ -93,30 +85,23 @@ body{
 
 <body>
 
-<!-- HEADER -->
+<!-- BANNER -->
 <div class="header">
-    <img src="banner.png" alt="Cubanos sin fronteras">
+    <img src="banner.png">
 </div>
 
 <div class="main">
 
-<!-- MENU IZQUIERDO -->
+<!-- MENU -->
 <div class="sidebar">
 
 <a class="btn" href="https://facebook.com" target="_blank">📦 Paquetería a Cuba</a>
-
 <a class="btn" href="https://wa.me/5599999999999" target="_blank">💸 Envío de remesas</a>
-
 <a class="btn" href="https://www.floripanazuera.com" target="_blank">💼 Ofertas de trabajo</a>
-
 <a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">🎓 Cursos online</a>
-
 <a class="btn" href="#">📢 Anuncia tu negocio aquí</a>
-
 <a class="btn" onclick="mostrarNoticias()">📰 Noticias</a>
-
 <a class="btn" href="#">🌐 Traductor juramentado</a>
-
 <a class="btn" onclick="mostrarNegocios()">🏪 Negocios de cubanos en tu región</a>
 
 </div>
@@ -131,37 +116,33 @@ body{
 
 </div>
 
-<!-- NOTICIAS -->
 <div class="content hidden" id="noticias">
-<button class="back" onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">⬅ Volver</button>
 <h2>Noticias</h2>
-<p>Aquí publicarás noticias próximamente</p>
 </div>
 
-<!-- NEGOCIOS -->
 <div class="content hidden" id="negocios">
-<button class="back" onclick="volver()">⬅ Volver</button>
-<h2>Negocios de cubanos</h2>
-<p>Aquí agregarás los negocios por región</p>
+<button onclick="volver()">⬅ Volver</button>
+<h2>Negocios</h2>
 </div>
 
 </div>
 
 <script>
 function mostrarNoticias(){
-    document.getElementById("inicio").style.display="none";
-    document.getElementById("noticias").style.display="block";
+document.getElementById("inicio").style.display="none";
+document.getElementById("noticias").style.display="block";
 }
 
 function mostrarNegocios(){
-    document.getElementById("inicio").style.display="none";
-    document.getElementById("negocios").style.display="block";
+document.getElementById("inicio").style.display="none";
+document.getElementById("negocios").style.display="block";
 }
 
 function volver(){
-    document.getElementById("inicio").style.display="block";
-    document.getElementById("noticias").style.display="none";
-    document.getElementById("negocios").style.display="none";
+document.getElementById("inicio").style.display="block";
+document.getElementById("noticias").style.display="none";
+document.getElementById("negocios").style.display="none";
 }
 </script>
 
