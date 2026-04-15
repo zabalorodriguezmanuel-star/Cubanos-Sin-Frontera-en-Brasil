@@ -1,150 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cubanos sin Fronteras</title>
-    <style>
-        /* COLORES EXACTOS DEL BANNER */
-        :root {
-            --negro-puro: #000000;
-            --azul-brillante: #0066ff;
-            --verde-brasil: #00a859;
-            --rojo-cuba: #cc0000;
-            --dorado: #ffcc00;
-            --blanco: #ffffff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Sitio Web</title>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-        body {
-            background-color: var(--negro-puro); /* Fondo totalmente negro */
-            color: var(--blanco);
-            font-family: 'Segoe UI', Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
 
-        /* BANNER SUPERIOR - OCUPA TODO EL ANCHO SIN ESPACIOS */
-        header {
-            width: 100%;
-            background-color: var(--negro-puro);
-            display: flex;
-            justify-content: center;
-        }
+body{
+    background:#0f172a;
+    color:#fff;
+}
 
-        header img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+/* ====== BANNER ====== */
+.banner{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
 
-        .main-content {
-            width: 90%;
-            max-width: 1100px;
-            margin-top: 30px;
-        }
+.banner h1{
+    font-size:50px;
+}
 
-        /* QUIENES SOMOS - FONDO NEGRO CON BORDE AZUL */
-        .quienes-somos {
-            background-color: var(--negro-puro);
-            border: 2px solid var(--azul-brillante);
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+.banner p{
+    margin-top:10px;
+    font-size:18px;
+}
 
-        .quienes-somos h2 {
-            color: var(--azul-brillante);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+/* ===== BOTONES ===== */
+.container{
+    padding:40px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap:20px;
+}
 
-        /* GRID DE BOTONES */
-        .grid-botones {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+}
 
-        .btn {
-            background-color: #111111; /* Un tono apenas visible sobre el negro para dar relieve */
-            color: var(--blanco);
-            text-decoration: none;
-            padding: 25px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-align: center;
-            border: 2px solid #333333;
-            transition: 0.3s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.card:hover{
+    background:#334155;
+    transform:scale(1.05);
+}
 
-        .btn:hover {
-            transform: translateY(-3px);
-            filter: brightness(1.3);
-        }
+.card h3{
+    font-size:18px;
+}
 
-        /* ASIGNACIÓN DE COLORES DEL LOGO A LOS BOTONES */
-        .btn-paqueteria { border-color: var(--rojo-cuba); color: var(--rojo-cuba); }
-        .btn-remesas { border-color: var(--verde-brasil); color: var(--verde-brasil); }
-        .btn-anuncio { border-color: var(--dorado); color: var(--dorado); }
-        .btn-traductor { border-color: var(--azul-brillante); color: var(--azul-brillante); }
+/* ===== WHATSAPP ===== */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    text-decoration:none;
+    animation: pulse 1.5s infinite;
+}
 
-        footer {
-            margin: 50px 0;
-            font-size: 0.8rem;
-            color: #555;
-        }
-
-        @media (max-width: 600px) {
-            .grid-botones { grid-template-columns: 1fr; }
-        }
-    </style>
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+</style>
 </head>
+
 <body>
 
-    <header>
-        <img src="banner.jpg" alt="Cubanos sin Fronteras Banner">
-    </header>
-
-    <div class="main-content">
-        <section class="quienes-somos">
-            <h2>QUIENES SOMOS</h2>
-            <p>Cubanos sin frontera en Brasil: sitio único y oficial de los cubanos en Brasil.</p>
-        </section>
-
-        <nav class="grid-botones">
-            <a href="https://facebook.com" target="_blank" class="btn btn-paqueteria">1. Paquetería a Cuba</a>
-            
-            <a href="https://wa.me/TUNUMERO" target="_blank" class="btn btn-remesas">2. Envío de Remesas</a>
-            
-            <a href="http://www.floripanazuera.com" target="_blank" class="btn">3. Ofertas de Trabajo</a>
-            
-            <a href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank" class="btn">4. Cursos Online</a>
-            
-            <a href="#" class="btn btn-anuncio">5. ¡Anuncia tu negocio aquí!</a>
-            
-            <a href="noticias.html" class="btn">6. Noticias</a>
-            
-            <a href="#" class="btn btn-traductor">7. Traductor Juramentado</a>
-            
-            <a href="negocios.html" class="btn">8. Negocios de Cubanos en tu Región</a>
-        </nav>
+<!-- ===== BANNER ===== -->
+<section class="banner">
+    <div>
+        <h1>Tu Negocio Aquí</h1>
+        <p>Diseño web profesional y servicios para tu crecimiento</p>
     </div>
+</section>
 
-    <footer>
-        © 2026 Cubanos sin Fronteras en Brasil
-    </footer>
+<!-- ===== BOTONES ===== -->
+<section class="container">
+
+<div class="card"><h3>Paquetería a Cuba</h3></div>
+<div class="card"><h3>Envío de Remesas</h3></div>
+<div class="card"><h3>Ofertas de Trabajo</h3></div>
+<div class="card"><h3>Cursos Online</h3></div>
+<div class="card"><h3>Anuncia tu negocio aquí</h3></div>
+<div class="card"><h3>Noticias</h3></div>
+<div class="card"><h3>Traductor Juramentado</h3></div>
+<div class="card"><h3>Negocios de Cubanos</h3></div>
+
+</section>
+
+<!-- ===== WHATSAPP ===== -->
+<a class="whatsapp" href="https://wa.me/5350000000" target="_blank">💬</a>
 
 </body>
 </html>
