@@ -31,6 +31,7 @@ body{
 
 .logo img{
     height:300px;
+    width:auto;
 }
 
 /* PORTADA */
@@ -77,6 +78,11 @@ body{
     align-items:center;
     gap:10px;
     cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    background:#334155;
 }
 
 .card i{
@@ -87,7 +93,7 @@ body{
 .contenido{
     flex:1;
     padding:20px;
-    max-width:800px; /* 👈 controla ancho del texto */
+    max-width:800px;
 }
 
 .contenido h2{
@@ -108,6 +114,7 @@ body{
     justify-content:center;
     font-size:26px;
     color:white;
+    text-decoration:none;
 }
 
 /* MOBILE */
@@ -138,25 +145,25 @@ body{
 
 <!-- LOGO -->
 <div class="logo">
-    <img src="logo.png">
+    <img src="logo.png" alt="Cubanos Sin Fronteras">
 </div>
 
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
         <h2>Conectando cubanos en Brasil</h2>
-        <p>Oportunidades, servicios y una comunidad sin fronteras</p>
+        <p>Oportunidades, servicios y comunidad sin fronteras</p>
     </div>
 </section>
 
 <!-- SECCION -->
 <section class="seccion">
 
-    <!-- MENU IZQUIERDO (SE QUEDA IGUAL) -->
+    <!-- MENU IZQUIERDO -->
     <div class="menu-izquierdo">
 
         <div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
-        <div class="card"><i class="fas fa-money-bill-wave"></i><span>Envios de Remesas</span></div>
+        <div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
         <div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
         <div class="card"><i class="fas fa-graduation-cap"></i><span>Cursos online</span></div>
         <div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
@@ -165,12 +172,12 @@ body{
 
     </div>
 
-    <!-- CONTENIDO (A LA DERECHA) -->
+    <!-- CONTENIDO -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
         <p>
             Aquí puedes colocar la descripción de tu sitio, explicar los servicios, 
-            poner anuncios o cualquier información importante para los usuarios.
+            añadir anuncios o cualquier información importante para tus usuarios.
         </p>
     </div>
 
