@@ -13,10 +13,10 @@ body{
     color:white;
 }
 
-/* ===== BANNER REAL FULL ===== */
+/* ===== BANNER COMPLETO ===== */
 .header{
     width:100%;
-    height:120px;
+    height:130px;
     background:black;
     display:flex;
     justify-content:center;
@@ -32,10 +32,10 @@ body{
     display:flex;
 }
 
-/* ===== MENU PEGADO IZQUIERDA ===== */
+/* ===== MENU IZQUIERDO PEGADO ===== */
 .sidebar{
-    width:260px;
-    padding:20px 10px; /* MENOS ESPACIO IZQUIERDA */
+    width:250px;
+    padding:20px 10px 20px 10px;
 }
 
 /* ===== BOTONES ===== */
@@ -48,22 +48,17 @@ body{
     color:white;
     font-weight:bold;
     background: linear-gradient(45deg,#00c3ff,#00ff95,#ff2e2e);
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
 }
 
 /* ===== CONTENIDO BIEN SEPARADO ===== */
 .content{
     flex:1;
-    padding:80px 100px; /* MÁS SEPARADO */
+    padding:80px 120px; /* separación REAL */
 }
 
-/* ===== QUIENES SOMOS ===== */
+/* ===== CAJA ===== */
 .box{
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     padding:30px;
     border-radius:12px;
     max-width:500px;
@@ -92,17 +87,17 @@ button{
 
 <div class="main">
 
-<!-- MENU -->
+<!-- MENU IZQUIERDO -->
 <div class="sidebar">
 
-<a class="btn" href="https://facebook.com" target="_blank">📦 Paquetería a Cuba</a>
-<a class="btn" href="https://wa.me/5599999999999" target="_blank">💸 Envío de remesas</a>
-<a class="btn" href="https://www.floripanazuera.com" target="_blank">💼 Ofertas de trabajo</a>
-<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">🎓 Cursos online</a>
-<a class="btn" href="#">📢 Anuncia tu negocio aquí</a>
-<a class="btn" onclick="mostrarNoticias()">📰 Noticias</a>
-<a class="btn" href="#">🌐 Traductor juramentado</a>
-<a class="btn" onclick="mostrarNegocios()">🏪 Negocios de cubanos en tu región</a>
+<a class="btn" href="https://facebook.com" target="_blank">Paquetería a Cuba</a>
+<a class="btn" href="https://wa.me/5599999999999" target="_blank">Envío de remesas</a>
+<a class="btn" href="https://www.floripanazuera.com" target="_blank">Ofertas de trabajo</a>
+<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">Cursos online</a>
+<a class="btn" href="#">Anuncia tu negocio aquí</a>
+<a class="btn" onclick="mostrarNoticias()">Noticias</a>
+<a class="btn" href="#">Traductor juramentado</a>
+<a class="btn" onclick="mostrarNegocios()">Negocios de cubanos en tu región</a>
 
 </div>
 
@@ -117,12 +112,12 @@ button{
 </div>
 
 <div class="content hidden" id="noticias">
-<button onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">Volver</button>
 <h2>Noticias</h2>
 </div>
 
 <div class="content hidden" id="negocios">
-<button onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">Volver</button>
 <h2>Negocios</h2>
 </div>
 
