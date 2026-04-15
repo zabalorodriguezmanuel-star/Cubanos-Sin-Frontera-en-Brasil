@@ -1,138 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cubanos Sin Fronteras</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubanos sin Fronteras</title>
+    <style>
+        :root {
+            --primary-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --accent-blue: #007bff;
+            --accent-red: #ff3b3b;
+            --accent-green: #28a745;
+            --text-silver: #e0e0e0;
+            --gold: #f1c40f;
+        }
 
-<style>
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#0a1f44,#00c27a,#ff1e1e);
-    color:white;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-silver);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-/* ===== BANNER PERFECTAMENTE AJUSTADO ===== */
-.header{
-    width:100%;
-    height:140px; /* 🔥 BAJAMOS ALTURA */
-    background-color:black;
-    background-image:url('banner.png');
-    background-repeat:no-repeat;
-    background-position:center center;
-    background-size:auto 100%; /* 🔥 CLAVE */
-}
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
 
-/* ===== ESTRUCTURA ===== */
-.main{
-    display:flex;
-    flex-wrap:wrap;
-}
+        .banner {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 123, 255, 0.3);
+        }
 
-/* ===== MENU ===== */
-.sidebar{
-    width:250px;
-    padding:20px 10px;
-}
+        .quienes-somos {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-blue);
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+        }
 
-.btn{
-    display:block;
-    margin-bottom:15px;
-    padding:12px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    background: linear-gradient(45deg,#00c3ff,#00ff95,#ff2e2e);
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+        }
 
-/* ===== CONTENIDO ===== */
-.content{
-    flex:1;
-    padding:60px;
-    display:flex;
-    justify-content:center;
-}
+        .btn {
+            background: linear-gradient(145deg, #222, #111);
+            border: 2px solid #333;
+            color: white;
+            padding: 25px 15px;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
 
-.box{
-    background: rgba(0,0,0,0.7);
-    padding:30px;
-    border-radius:12px;
-    max-width:500px;
-}
+        .btn:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+            background: #1f1f1f;
+        }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width:768px){
+        /* Colores específicos para destacar según el boceto */
+        .btn-highlight { border-color: var(--gold); color: var(--gold); }
+        .btn-red { border-color: var(--accent-red); }
+        .btn-green { border-color: var(--accent-green); }
 
-.main{
-    flex-direction:column;
-}
-
-.sidebar{
-    width:100%;
-}
-
-.btn{
-    width:90%;
-    margin:auto;
-    margin-bottom:10px;
-}
-
-.content{
-    padding:20px;
-}
-
-.header{
-    height:100px;
-}
-
-}
-
-.hidden{
-    display:none;
-}
-</style>
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- BANNER -->
-<div class="header"></div>
+    <header>
+        <img src="banner.jpg" alt="Cubanos sin Fronteras" class="banner">
+        <h1>Cubanos sin Fronteras en Brasil</h1>
+    </header>
 
-<div class="main">
+    <section class="quienes-somos">
+        <h3>¿Quiénes Somos?</h3>
+        <p>Cubanos sin Frontera en Brasil: sitio único y oficial de los cubanos en Brasil.</p>
+    </section>
 
-<!-- MENU -->
-<div class="sidebar">
-<a class="btn" href="https://facebook.com" target="_blank">Paquetería a Cuba</a>
-<a class="btn" href="https://wa.me/5599999999999" target="_blank">Envío de remesas</a>
-<a class="btn" href="https://www.floripanazuera.com" target="_blank">Ofertas de trabajo</a>
-<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">Cursos online</a>
-<a class="btn" href="#">Anuncia tu negocio aquí</a>
-<a class="btn" onclick="mostrarNoticias()">Noticias</a>
-<a class="btn" href="#">Traductor juramentado</a>
-<a class="btn" onclick="mostrarNegocios()">Negocios de cubanos en tu región</a>
-</div>
+    <main class="grid-container">
+        <a href="https://facebook.com" target="_blank" class="btn btn-red">1. Paquetería a Cuba</a>
+        
+        <a href="https://wa.me/TUNUMERO" target="_blank" class="btn btn-green">2. Envío de Remesas</a>
+        
+        <a href="http://www.floripanazuera.com" target="_blank" class="btn">3. Ofertas de Trabajo</a>
+        
+        <a href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank" class="btn">4. Cursos Online</a>
+        
+        <a href="mailto:tuemail@ejemplo.com" class="btn btn-highlight">5. ¡Anuncia tu negocio aquí!</a>
+        
+        <a href="noticias.html" class="btn">6. Noticias</a>
+        
+        <a href="#" class="btn">7. Traductor Juramentado</a>
+        
+        <a href="negocios.html" class="btn">8. Negocios de Cubanos en tu Región</a>
+    </main>
 
-<!-- CONTENIDO -->
-<div class="content" id="inicio">
-<div class="box">
-<h2>¿Quiénes somos?</h2>
-<p>Cubanos sin frontera en Brasil sitio único y oficial de los cubanos en Brasil</p>
-</div>
-</div>
-
-</div>
-
-<script>
-function mostrarNoticias(){
-document.getElementById("inicio").style.display="none";
-}
-
-function mostrarNegocios(){
-document.getElementById("inicio").style.display="none";
-}
-</script>
+    <footer>
+        &copy; 2026 Cubanos sin Fronteras - Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
