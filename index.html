@@ -66,50 +66,39 @@ body{
     max-width:500px;
 }
 
-/* ===== NUEVO DISEÑO VERTICAL ===== */
-.container{
-    display:flex;
-    justify-content:space-between;
-    padding:40px 20px;
-    gap:20px;
-}
-
-/* COLUMNAS */
-.columna{
-    width:48%;
+/* ===== MENU DERECHO ===== */
+.menu-derecho{
+    position:fixed;
+    top:120px;
+    right:10px;
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:10px;
+    z-index:999;
 }
 
-/* TARJETAS */
+/* BOTONES */
 .card{
     background:#1e293b;
-    padding:20px;
-    border-radius:12px;
+    padding:10px 12px;
+    border-radius:8px;
     display:flex;
     align-items:center;
-    gap:15px;
-    transition:0.3s;
+    gap:8px;
+    font-size:13px;
     cursor:pointer;
+    transition:0.3s;
+    white-space:nowrap;
 }
 
 .card i{
-    font-size:26px;
+    font-size:16px;
     color:#38bdf8;
 }
 
 .card:hover{
     background:#334155;
-    transform:translateX(5px);
-}
-
-/* DESTACADO */
-.destacado{
-    text-align:center;
-    margin:30px;
-    font-size:20px;
-    font-weight:bold;
+    transform:translateX(-5px);
 }
 
 /* ===== WHATSAPP ===== */
@@ -126,6 +115,7 @@ body{
     justify-content:center;
     font-size:26px;
     color:white;
+    text-decoration:none;
 }
 
 /* ===== MOBILE ===== */
@@ -135,12 +125,12 @@ body{
         display:none;
     }
 
-    .container{
-        flex-direction:column;
+    .logo img{
+        width:160px;
     }
 
-    .columna{
-        width:100%;
+    .card span{
+        display:none; /* solo iconos en móvil */
     }
 }
 </style>
@@ -169,63 +159,19 @@ body{
     </div>
 </section>
 
-<!-- QUIENES SOMOS -->
-<div class="destacado">¿Quiénes somos?</div>
+<!-- MENU LATERAL DERECHO -->
+<div class="menu-derecho">
 
-<!-- CONTENIDO VERTICAL -->
-<section class="container">
-
-<!-- IZQUIERDA -->
-<div class="columna">
-
-<div class="card">
-    <i class="fas fa-box"></i>
-    <span>Envíos a Cuba</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-money-bill-wave"></i>
-    <span>Recargas Cuba</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-briefcase"></i>
-    <span>Ofertas de trabajo</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-graduation-cap"></i>
-    <span>Cursos online</span>
-</div>
+<div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
+<div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
+<div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
+<div class="card"><i class="fas fa-graduation-cap"></i><span>Cursos online</span></div>
+<div class="card"><i class="fas fa-bullhorn"></i><span>Anuncia tu negocio</span></div>
+<div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
+<div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
+<div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
 
 </div>
-
-<!-- DERECHA -->
-<div class="columna">
-
-<div class="card">
-    <i class="fas fa-bullhorn"></i>
-    <span>¿Quieres anunciar tu negocio?</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-newspaper"></i>
-    <span>Noticias</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-language"></i>
-    <span>Traductor juramentado</span>
-</div>
-
-<div class="card">
-    <i class="fas fa-store"></i>
-    <span>Negocios en tu región</span>
-</div>
-
-</div>
-
-</section>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5350000000" target="_blank">
