@@ -21,34 +21,17 @@ body{
     color:#fff;
 }
 
-/* ===== HEADER ===== */
-.header{
-    position:fixed;
-    top:0;
-    width:100%;
-    height:100px; /* 👈 espacio suficiente */
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:10px 30px;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    z-index:1000;
+/* ===== LOGO SOBRE IMAGEN ===== */
+.logo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    z-index:10;
 }
 
-/* LOGO GRANDE IZQUIERDA */
 .logo img{
-    height:80px;
+    height:180px; /* 👈 tamaño que pediste */
     width:auto;
-    object-fit:contain;
-}
-
-/* MENU */
-.nav a{
-    color:#fff;
-    margin-left:20px;
-    text-decoration:none;
-    font-size:14px;
 }
 
 /* ===== PORTADA ===== */
@@ -60,9 +43,9 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:100px; /* 👈 evita que el header tape */
 }
 
+/* TEXTO */
 .overlay{
     background:rgba(0,0,0,0.6);
     padding:25px;
@@ -76,7 +59,7 @@ body{
     min-height:100vh;
 }
 
-/* ===== MENU IZQUIERDO ===== */
+/* MENU IZQUIERDO */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -86,7 +69,6 @@ body{
     gap:15px;
 }
 
-/* BOTONES */
 .card{
     background:#1e293b;
     padding:12px;
@@ -94,18 +76,11 @@ body{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:14px;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .card i{
     color:#38bdf8;
-}
-
-.card:hover{
-    background:#334155;
-    transform:translateX(5px);
 }
 
 /* CONTENIDO */
@@ -130,15 +105,10 @@ body{
     color:white;
 }
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 @media (max-width:768px){
-
-    .nav{
-        display:none;
-    }
-
     .logo img{
-        height:60px;
+        height:120px;
     }
 
     .seccion{
@@ -160,21 +130,10 @@ body{
 
 <body>
 
-<!-- HEADER -->
-<header class="header">
-
-    <div class="logo">
-        <img src="logo.png" alt="Cubanos Sin Fronteras">
-    </div>
-
-    <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
-        <a href="#">Contacto</a>
-    </nav>
-
-</header>
+<!-- LOGO (SIN HEADER) -->
+<div class="logo">
+    <img src="logo.png" alt="Cubanos Sin Fronteras">
+</div>
 
 <!-- PORTADA -->
 <section class="brasil">
@@ -184,12 +143,10 @@ body{
     </div>
 </section>
 
-<!-- SECCION SIGUIENTE -->
+<!-- SECCION -->
 <section class="seccion">
 
-    <!-- MENU IZQUIERDO -->
     <div class="menu-izquierdo">
-
         <div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
         <div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
         <div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
@@ -198,13 +155,11 @@ body{
         <div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
         <div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
         <div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
-
     </div>
 
-    <!-- CONTENIDO -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
-        <p>Aquí puedes colocar información, anuncios o lo que quieras mostrar.</p>
+        <p>Aquí puedes colocar información.</p>
     </div>
 
 </section>
