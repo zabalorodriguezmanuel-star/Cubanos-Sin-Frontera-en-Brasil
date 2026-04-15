@@ -9,17 +9,22 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#002f6c,#007b5e,#d52b1e);
     color:white;
+    background: url('banner.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* CAPA OSCURA PARA LEER MEJOR */
+.overlay{
+    background: rgba(0,0,0,0.6);
+    min-height:100vh;
 }
 
 /* HEADER */
 header{
     display:flex;
     align-items:center;
-    justify-content:space-between;
-    padding:20px;
-    background:black;
+    padding:15px;
 }
 
 header img{
@@ -27,30 +32,46 @@ header img{
 }
 
 header h1{
-    flex:1;
+    margin-left:15px;
+}
+
+/* QUIENES SOMOS */
+.center{
     text-align:center;
+    margin:10px;
+}
+
+.box{
+    padding:15px;
+    border:1px solid white;
+    border-radius:8px;
+    display:inline-block;
+    background: rgba(0,0,0,0.5);
+}
+
+/* CONTENEDOR */
+.container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    flex-wrap:wrap;
 }
 
 /* BOTONES */
-.container{
-    display:flex;
-    padding:20px;
-}
-
-.left, .right{
-    width:50%;
-}
-
 .btn{
-    display:block;
-    margin:15px;
-    padding:15px;
-    background:rgba(255,255,255,0.1);
-    border:2px solid white;
+    width:260px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    border-radius:8px;
     text-decoration:none;
     color:white;
     font-weight:bold;
-    border-radius:10px;
+    background: rgba(255,255,255,0.1);
+    border:1px solid white;
     transition:0.3s;
 }
 
@@ -59,104 +80,104 @@ header h1{
     color:black;
 }
 
-/* QUIENES SOMOS */
-.center{
-    text-align:center;
-    margin:20px;
-}
-
-.box{
-    padding:20px;
-    border:2px solid white;
-    border-radius:10px;
-    margin:20px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
+/* ICONOS */
+.icon{
     font-size:20px;
-    text-decoration:none;
 }
 
 /* PAGINAS INTERNAS */
 .hidden{
     display:none;
+    text-align:center;
+    padding:40px;
+}
+
+/* BOTON VOLVER */
+.back{
+    padding:10px 20px;
+    border:none;
+    background:white;
+    color:black;
+    border-radius:6px;
+    cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 
+<div class="overlay">
+
 <!-- HEADER -->
 <header>
-    <img src="logo.png" alt="logo">
+    <img src="logo.png">
     <h1>CUBANOS SIN FRONTERAS</h1>
 </header>
 
-<!-- PAGINA PRINCIPAL -->
+<!-- INICIO -->
 <div id="inicio">
 
 <div class="center">
     <div class="box">
-        <h2>¿Quiénes somos?</h2>
+        <h3>¿Quiénes somos?</h3>
         <p>Cubanos sin frontera en Brasil sitio único y oficial de los cubanos en Brasil</p>
     </div>
 </div>
 
 <div class="container">
 
-<div class="left">
-    <a class="btn" href="https://facebook.com" target="_blank">1- Paquetería a Cuba</a>
+<a class="btn" href="https://facebook.com" target="_blank">
+    <span class="icon">📦</span> Paquetería a Cuba
+</a>
 
-    <a class="btn" href="https://wa.me/5599999999999" target="_blank">2- Envío de remesas</a>
+<a class="btn" href="https://wa.me/5599999999999" target="_blank">
+    <span class="icon">💸</span> Envío de remesas
+</a>
 
-    <a class="btn" href="https://www.floripanazuera.com" target="_blank">3- Ofertas de trabajo</a>
+<a class="btn" href="https://www.floripanazuera.com" target="_blank">
+    <span class="icon">💼</span> Ofertas de trabajo
+</a>
 
-    <a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">4- Cursos online</a>
+<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">
+    <span class="icon">🎓</span> Cursos online
+</a>
+
+<a class="btn" href="#">
+    <span class="icon">📢</span> Anuncia tu negocio aquí
+</a>
+
+<a class="btn" onclick="mostrarNoticias()">
+    <span class="icon">📰</span> Noticias
+</a>
+
+<a class="btn" href="#">
+    <span class="icon">🌐</span> Traductor juramentado
+</a>
+
+<a class="btn" onclick="mostrarNegocios()">
+    <span class="icon">🏪</span> Negocios de cubanos en tu región
+</a>
+
+</div>
 </div>
 
-<div class="right">
-    <a class="btn" href="#">5- Anuncia tu negocio aquí</a>
-
-    <a class="btn" onclick="mostrarNoticias()">6- Noticias</a>
-
-    <a class="btn" href="#">7- Traductor juramentado</a>
-
-    <a class="btn" onclick="mostrarNegocios()">8- Negocios de cubanos en tu región</a>
-</div>
-
-</div>
-</div>
-
-<!-- PAGINA NOTICIAS -->
+<!-- NOTICIAS -->
 <div id="noticias" class="hidden">
-    <div class="center">
-        <img src="logo.png" height="80"><br><br>
-        <button onclick="volver()">⬅ Volver al inicio</button>
-        <h2>Noticias</h2>
-        <p>(Aquí colocarás las noticias en el futuro)</p>
-    </div>
+    <img src="logo.png" height="80"><br><br>
+    <button class="back" onclick="volver()">⬅ Volver</button>
+    <h2>Noticias</h2>
+    <p>Aquí publicarás noticias próximamente</p>
 </div>
 
-<!-- PAGINA NEGOCIOS -->
+<!-- NEGOCIOS -->
 <div id="negocios" class="hidden">
-    <div class="center">
-        <img src="logo.png" height="80"><br><br>
-        <button onclick="volver()">⬅ Volver al inicio</button>
-        <h2>Negocios de cubanos en tu región</h2>
-        <p>(Aquí agregarás los negocios más adelante)</p>
-    </div>
+    <img src="logo.png" height="80"><br><br>
+    <button class="back" onclick="volver()">⬅ Volver</button>
+    <h2>Negocios de cubanos</h2>
+    <p>Aquí agregarás los negocios por región</p>
 </div>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5599999999999" target="_blank">💬</a>
+</div>
 
 <script>
 function mostrarNoticias(){
