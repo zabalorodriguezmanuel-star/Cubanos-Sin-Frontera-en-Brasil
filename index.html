@@ -20,22 +20,25 @@ body{
     color:#fff;
 }
 
-/* ===== BRASIL (AHORA ES EL INICIO) ===== */
+/* ===== PORTADA BRASIL ===== */
 .brasil{
     width:100%;
-    height:100vh;
+    min-height:100vh;
     background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') no-repeat center;
     background-size:cover;
     display:flex;
     align-items:center;
     justify-content:center;
+    padding:20px;
 }
 
+/* TEXTO ENCIMA */
 .overlay{
     background:rgba(0,0,0,0.6);
-    padding:30px;
+    padding:25px;
     border-radius:12px;
     text-align:center;
+    max-width:500px;
 }
 
 .overlay h2{
@@ -49,16 +52,16 @@ body{
 
 /* ===== BOTONES ===== */
 .container{
-    padding:40px;
+    padding:30px 20px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+    gap:15px;
 }
 
 .card{
     background:#1e293b;
-    padding:25px;
-    border-radius:15px;
+    padding:20px;
+    border-radius:12px;
     text-align:center;
     transition:0.3s;
     cursor:pointer;
@@ -69,19 +72,23 @@ body{
     transform:scale(1.05);
 }
 
+.card h3{
+    font-size:16px;
+}
+
 /* ===== WHATSAPP ===== */
 .whatsapp{
     position:fixed;
-    bottom:20px;
-    right:20px;
+    bottom:15px;
+    right:15px;
     background:#25D366;
-    width:60px;
-    height:60px;
+    width:55px;
+    height:55px;
     border-radius:50%;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
+    font-size:26px;
     color:white;
     text-decoration:none;
     animation:pulse 1.5s infinite;
@@ -93,10 +100,27 @@ body{
     100%{transform:scale(1);}
 }
 
-/* RESPONSIVE */
+/* ===== MOBILE AJUSTES ===== */
 @media (max-width:768px){
+
+    .overlay{
+        padding:20px;
+    }
+
     .overlay h2{
-        font-size:24px;
+        font-size:22px;
+    }
+
+    .overlay p{
+        font-size:14px;
+    }
+
+    .container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .card h3{
+        font-size:14px;
     }
 }
 </style>
@@ -104,7 +128,7 @@ body{
 
 <body>
 
-<!-- ===== BRASIL (PRIMERA SECCIÓN) ===== -->
+<!-- ===== PORTADA ===== -->
 <section class="brasil">
     <div class="overlay">
         <h2>Conectando cubanos en Brasil</h2>
