@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+<!-- ICONOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 *{
     margin:0;
@@ -20,16 +23,36 @@ body{
     color:#fff;
 }
 
-/* ===== HEADER LOGO ===== */
+/* ===== HEADER ===== */
 .header{
-    position:absolute;
-    top:10px;
-    left:20px;
-    z-index:10;
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 30px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index:1000;
 }
 
-.header img{
-    width:180px;
+/* LOGO GRANDE */
+.logo img{
+    width:220px;
+}
+
+/* MENU */
+.nav a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:#38bdf8;
 }
 
 /* ===== PORTADA ===== */
@@ -41,7 +64,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:20px;
+    padding:100px 20px 20px;
 }
 
 .overlay{
@@ -78,13 +101,15 @@ body{
     cursor:pointer;
 }
 
+.card i{
+    font-size:28px;
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
 .card:hover{
     background:#334155;
     transform:scale(1.05);
-}
-
-.card h3{
-    font-size:16px;
 }
 
 /* ===== WHATSAPP ===== */
@@ -114,8 +139,12 @@ body{
 /* ===== MOBILE ===== */
 @media (max-width:768px){
 
-    .header img{
-        width:120px;
+    .logo img{
+        width:160px;
+    }
+
+    .nav{
+        display:none;
     }
 
     .overlay h2{
@@ -135,10 +164,21 @@ body{
 
 <body>
 
-<!-- ===== LOGO ===== -->
-<div class="header">
-    <img src="logo.png" alt="Cubanos Sin Fronteras">
-</div>
+<!-- ===== HEADER ===== -->
+<header class="header">
+
+    <div class="logo">
+        <img src="logo.png" alt="Cubanos Sin Fronteras">
+    </div>
+
+    <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Noticias</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+</header>
 
 <!-- ===== PORTADA ===== -->
 <section class="brasil">
@@ -148,22 +188,55 @@ body{
     </div>
 </section>
 
-<!-- ===== BOTONES ===== -->
+<!-- ===== BOTONES CON ICONOS ===== -->
 <section class="container">
 
-<div class="card"><h3>Paquetería a Cuba</h3></div>
-<div class="card"><h3>Envío de Remesas</h3></div>
-<div class="card"><h3>Ofertas de Trabajo</h3></div>
-<div class="card"><h3>Cursos Online</h3></div>
-<div class="card"><h3>Anuncia tu negocio aquí</h3></div>
-<div class="card"><h3>Noticias</h3></div>
-<div class="card"><h3>Traductor Juramentado</h3></div>
-<div class="card"><h3>Negocios de Cubanos en tu región</h3></div>
+<div class="card">
+    <i class="fas fa-box"></i>
+    <h3>Paquetería a Cuba</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-money-bill-wave"></i>
+    <h3>Envío de Remesas</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-briefcase"></i>
+    <h3>Ofertas de Trabajo</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-graduation-cap"></i>
+    <h3>Cursos Online</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-bullhorn"></i>
+    <h3>Anuncia tu negocio</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-newspaper"></i>
+    <h3>Noticias</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-language"></i>
+    <h3>Traductor Juramentado</h3>
+</div>
+
+<div class="card">
+    <i class="fas fa-store"></i>
+    <h3>Negocios en tu región</h3>
+</div>
 
 </section>
 
 <!-- ===== WHATSAPP ===== -->
-<a class="whatsapp" href="https://wa.me/5350000000" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/5350000000" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
