@@ -21,101 +21,40 @@ body{
     color:#fff;
 }
 
-/* ===== LOGO ===== */
+/* LOGO */
 .logo{
     position:absolute;
     top:80px;
     left:20px;
-    z-index:10;
-
-    /* animación entrada */
-    opacity:0;
-    transform:translateY(-20px);
-    animation:fadeIn 1.5s ease forwards;
 }
 
-/* ANIMACIÓN DE ENTRADA */
-@keyframes fadeIn{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* LOGO IMG */
 .logo img{
     height:300px;
-    width:auto;
-
-    /* glow continuo */
-    animation:glow 3s infinite ease-in-out;
-
-    transition:0.3s;
 }
 
-/* EFECTO GLOW */
-@keyframes glow{
-    0%{
-        filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));
-    }
-    50%{
-        filter:drop-shadow(0 0 20px rgba(56,189,248,0.8));
-    }
-    100%{
-        filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));
-    }
-}
-
-/* HOVER */
-.logo img:hover{
-    transform:scale(1.08);
-    filter:drop-shadow(0 0 25px rgba(56,189,248,1));
-}
-
-/* ===== PORTADA ===== */
+/* PORTADA */
 .brasil{
-    width:100%;
     height:100vh;
-    background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') no-repeat center;
-    background-size:cover;
+    background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') center/cover;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
-/* TEXTO */
 .overlay{
     background:rgba(0,0,0,0.6);
-    padding:35px;
+    padding:30px;
     border-radius:15px;
     text-align:center;
-    max-width:700px;
 }
 
-.overlay h2{
-    font-size:38px;
-    text-shadow:0 4px 20px rgba(0,0,0,0.8),
-                0 0 10px rgba(56,189,248,0.6);
-}
-
-.check{
-    color:#38bdf8;
-}
-
-.overlay p{
-    margin-top:15px;
-    font-size:18px;
-}
-
-/* ===== SECCION ===== */
+/* SECCION */
 .seccion{
     display:flex;
-    justify-content:space-between;
     padding:30px;
     gap:20px;
 }
 
-/* MENU */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -130,22 +69,17 @@ body{
     padding:12px;
     border-radius:8px;
     display:flex;
-    align-items:center;
     gap:10px;
-    cursor:pointer;
 }
 
 .card i{
     color:#38bdf8;
 }
 
-/* CONTENIDO */
 .contenido{
     flex:1;
-    padding:20px;
 }
 
-/* PUBLICIDAD */
 .publicidad{
     width:260px;
     margin-right:30px;
@@ -156,36 +90,68 @@ body{
 .publicidad img{
     width:100%;
     border-radius:10px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
-.texto-publicidad{
-    margin-top:15px;
-    font-size:16px;
-    font-weight:600;
+/* ===== FOOTER ===== */
+.footer{
+    margin-top:40px;
+    padding:40px 20px;
+    background:#020617;
+    text-align:center;
+}
+
+/* ICONOS */
+.redes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:20px;
+}
+
+.red{
+    text-align:center;
+}
+
+.red i{
+    font-size:28px;
+    padding:15px;
+    border-radius:50%;
+    background:#1e293b;
+    transition:0.3s;
+}
+
+.red i:hover{
+    transform:scale(1.2);
+    background:#38bdf8;
+}
+
+.contador{
+    margin-top:8px;
+    font-size:14px;
     color:#38bdf8;
-    text-shadow:0 0 8px rgba(56,189,248,0.7);
 }
 
-/* ===== MOBILE ===== */
+/* BOTON EMAIL */
+.email-btn{
+    margin-top:20px;
+    display:inline-block;
+    padding:12px 20px;
+    background:#38bdf8;
+    color:#000;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.email-btn:hover{
+    background:#0ea5e9;
+}
+
+/* MOBILE */
 @media (max-width:768px){
-
-    .logo{
-        top:60px;
-    }
-
-    .logo img{
-        height:180px;
-    }
-
     .seccion{
         flex-direction:column;
-    }
-
-    .publicidad{
-        width:100%;
-        margin-right:0;
-        margin-top:20px;
     }
 }
 </style>
@@ -195,14 +161,14 @@ body{
 
 <!-- LOGO -->
 <div class="logo">
-    <img src="logo.png" alt="Cubanos Sin Fronteras">
+    <img src="logo.png">
 </div>
 
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>🌎 Cubanos en Brasil <span class="check">✔️ Sitio Oficial</span></h2>
-        <p>Servicios, empleo, noticias y comunidad cubana en un solo lugar.</p>
+        <h2>🌎 Cubanos en Brasil ✔️ Sitio Oficial</h2>
+        <p>Servicios, empleo, noticias y comunidad cubana.</p>
     </div>
 </section>
 
@@ -211,30 +177,56 @@ body{
 
     <div class="menu-izquierdo">
         <div class="card"><i class="fas fa-box"></i> Envíos a Cuba</div>
-        <div class="card"><i class="fas fa-money-bill-wave"></i> Recargas Cuba</div>
-        <div class="card"><i class="fas fa-briefcase"></i> Ofertas de trabajo</div>
-        <div class="card"><i class="fas fa-graduation-cap"></i> Cursos online</div>
+        <div class="card"><i class="fas fa-money-bill-wave"></i> Recargas</div>
+        <div class="card"><i class="fas fa-briefcase"></i> Trabajo</div>
+        <div class="card"><i class="fas fa-graduation-cap"></i> Cursos</div>
         <div class="card"><i class="fas fa-newspaper"></i> Noticias</div>
-        <div class="card"><i class="fas fa-language"></i> Traductor juramentado</div>
-        <div class="card"><i class="fas fa-store"></i> Negocios en tu región</div>
     </div>
 
     <div class="contenido">
         <h2>Contenido del sitio</h2>
-        <p>
-            Aquí puedes colocar la descripción de tu sitio, servicios o anuncios.
-        </p>
+        <p>Descripción del sitio aquí.</p>
     </div>
 
     <div class="publicidad">
-        <img src="anuncia tu negocio.png" alt="Publicidad">
-        <div class="texto-publicidad">
-            📢 Aquí le damos publicidad a tu negocio  
-            ¡Contáctanos!
-        </div>
+        <img src="anuncia tu negocio.png">
+        <p style="margin-top:10px;color:#38bdf8;">
+            📢 Publicita tu negocio aquí
+        </p>
     </div>
 
 </section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+    <h2>Síguenos en redes</h2>
+
+    <div class="redes">
+
+        <div class="red">
+            <i class="fab fa-facebook-f"></i>
+            <div class="contador">12K seguidores</div>
+        </div>
+
+        <div class="red">
+            <i class="fab fa-instagram"></i>
+            <div class="contador">8.5K seguidores</div>
+        </div>
+
+        <div class="red">
+            <i class="fab fa-tiktok"></i>
+            <div class="contador">15K seguidores</div>
+        </div>
+
+    </div>
+
+    <!-- BOTON EMAIL -->
+    <a class="email-btn" href="mailto:zabalorodriguezmanuel@gmail.com">
+        📧 Contactar por Email
+    </a>
+
+</footer>
 
 </body>
 </html>
