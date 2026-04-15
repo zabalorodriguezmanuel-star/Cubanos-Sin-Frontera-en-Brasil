@@ -21,32 +21,29 @@ body{
     color:#fff;
 }
 
-/* ===== HEADER PRO ===== */
+/* ===== HEADER ===== */
 .header{
     position:fixed;
     top:0;
     width:100%;
-    height:90px;
+    height:100px; /* 👈 espacio suficiente */
     display:flex;
     align-items:center;
-    justify-content:center;
-    background:rgba(0,0,0,0.8);
+    justify-content:space-between;
+    padding:10px 30px;
+    background:rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
     z-index:1000;
 }
 
-/* LOGO */
+/* LOGO GRANDE IZQUIERDA */
 .logo img{
-    height:70px;
+    height:80px;
     width:auto;
+    object-fit:contain;
 }
 
 /* MENU */
-.nav{
-    position:absolute;
-    right:30px;
-}
-
 .nav a{
     color:#fff;
     margin-left:20px;
@@ -63,7 +60,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-    padding-top:90px;
+    padding-top:100px; /* 👈 evita que el header tape */
 }
 
 .overlay{
@@ -133,7 +130,7 @@ body{
     color:white;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width:768px){
 
     .nav{
@@ -141,7 +138,7 @@ body{
     }
 
     .logo img{
-        height:50px;
+        height:60px;
     }
 
     .seccion{
