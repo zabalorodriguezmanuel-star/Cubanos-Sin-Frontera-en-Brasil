@@ -45,11 +45,22 @@ body{
     justify-content:center;
 }
 
+/* TEXTO MEJORADO */
 .overlay{
     background:rgba(0,0,0,0.6);
-    padding:25px;
+    padding:30px;
     border-radius:12px;
     text-align:center;
+    max-width:600px;
+}
+
+.overlay h2{
+    font-size:32px;
+}
+
+.overlay p{
+    margin-top:10px;
+    font-size:18px;
 }
 
 /* SECCION */
@@ -89,7 +100,7 @@ body{
     color:#38bdf8;
 }
 
-/* CONTENIDO DERECHA */
+/* CONTENIDO */
 .contenido{
     flex:1;
     padding:20px;
@@ -137,6 +148,14 @@ body{
     .card span{
         display:none;
     }
+
+    .overlay h2{
+        font-size:22px;
+    }
+
+    .overlay p{
+        font-size:14px;
+    }
 }
 </style>
 </head>
@@ -151,8 +170,11 @@ body{
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>Conectando cubanos en Brasil</h2>
-        <p>Oportunidades, servicios y comunidad sin fronteras</p>
+        <h2>🌎 Cubanos en Brasil <span style="color:#38bdf8;">✔️ Sitio Oficial</span></h2>
+        <p>
+            Tu punto de encuentro en Brasil 🇧🇷  
+            Servicios, empleo, noticias y comunidad cubana en un solo lugar.
+        </p>
     </div>
 </section>
 
