@@ -8,26 +8,20 @@
 <style>
 body{
     margin:0;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background: linear-gradient(135deg,#0a1f44,#00c27a,#ff1e1e);
     color:white;
 }
 
-/* ===== BANNER SIN RECORTE ===== */
+/* ===== BANNER PERFECTO ===== */
 .header{
     width:100%;
-    background:black;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px 0;
-}
-
-.header img{
-    width:100%;
-    height:auto; /* 🔥 NO RECORTA */
-    max-height:180px;
-    object-fit:contain; /* 🔥 MUESTRA TODO */
+    height:180px;
+    background-color:black;
+    background-image: url('banner.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:contain; /* 🔥 NO SE CORTA */
 }
 
 /* ===== ESTRUCTURA ===== */
@@ -38,16 +32,15 @@ body{
 
 /* ===== MENU ===== */
 .sidebar{
-    width:260px;
-    padding:20px;
+    width:250px;
+    padding:20px 10px;
 }
 
-/* ===== BOTONES ===== */
 .btn{
     display:block;
     margin-bottom:15px;
     padding:12px;
-    border-radius:10px;
+    border-radius:8px;
     text-decoration:none;
     color:white;
     font-weight:bold;
@@ -57,21 +50,20 @@ body{
 /* ===== CONTENIDO ===== */
 .content{
     flex:1;
-    padding:40px;
+    padding:60px;
     display:flex;
     justify-content:center;
 }
 
-/* ===== BOX ===== */
 .box{
     background: rgba(0,0,0,0.7);
-    padding:25px;
+    padding:30px;
     border-radius:12px;
     max-width:500px;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px){
+@media (max-width:768px){
 
 .main{
     flex-direction:column;
@@ -79,22 +71,20 @@ body{
 
 .sidebar{
     width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
 }
 
 .btn{
     width:90%;
-    text-align:center;
+    margin:auto;
+    margin-bottom:10px;
 }
 
 .content{
     padding:20px;
 }
 
-.header img{
-    max-height:120px;
+.header{
+    height:120px;
 }
 
 }
@@ -108,9 +98,7 @@ body{
 <body>
 
 <!-- BANNER -->
-<div class="header">
-    <img src="banner.png" alt="Cubanos sin fronteras">
-</div>
+<div class="header"></div>
 
 <div class="main">
 
@@ -135,13 +123,13 @@ body{
 </div>
 
 <div class="content hidden" id="noticias">
-<button onclick="volver()">Volver</button>
 <h2>Noticias</h2>
+<button onclick="volver()">Volver</button>
 </div>
 
 <div class="content hidden" id="negocios">
-<button onclick="volver()">Volver</button>
 <h2>Negocios</h2>
+<button onclick="volver()">Volver</button>
 </div>
 
 </div>
