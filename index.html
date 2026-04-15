@@ -6,8 +6,6 @@
 <title>Cubanos Sin Fronteras</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- ICONOS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -21,130 +19,78 @@
 body{
     background:#0f172a;
     color:#fff;
-    display:flex;
 }
 
-/* ===== MENU LATERAL ===== */
-.sidebar{
-    width:80px;
-    height:100vh;
-    background:#020617;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding-top:20px;
-    position:fixed;
-    left:0;
-    top:0;
-}
-
-/* LOGO ARRIBA */
-.sidebar img{
-    width:60px;
-    margin-bottom:30px;
-}
-
-/* ICONOS EN VERTICAL */
-.menu{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-}
-
-.menu a{
-    color:#38bdf8;
-    font-size:24px;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.menu a:hover{
-    color:#fff;
-    transform:scale(1.2);
-}
-
-/* ===== CONTENIDO ===== */
-.main{
-    margin-left:80px;
-    width:100%;
-}
-
-/* ===== PORTADA ===== */
-.brasil{
-    width:100%;
-    min-height:100vh;
-    background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') no-repeat center;
-    background-size:cover;
+/* ===== HEADER ===== */
+.header{
     display:flex;
     align-items:center;
-    justify-content:center;
     padding:20px;
 }
 
-.overlay{
-    background:rgba(0,0,0,0.6);
-    padding:25px;
-    border-radius:12px;
+.logo img{
+    width:200px;
+}
+
+/* ===== TITULO ===== */
+.titulo{
     text-align:center;
-    max-width:500px;
+    font-size:28px;
+    margin:10px 0 30px;
 }
 
-.overlay h2{
-    font-size:32px;
+/* ===== GRID PRINCIPAL ===== */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
 }
 
-.overlay p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-/* ===== CONTENIDO EXTRA ===== */
-.content{
-    padding:40px 20px;
-}
-
-.content h2{
-    margin-bottom:20px;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp{
-    position:fixed;
-    bottom:15px;
-    right:15px;
-    background:#25D366;
-    width:55px;
-    height:55px;
-    border-radius:50%;
+/* ===== BOTONES ===== */
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
     display:flex;
     align-items:center;
+    gap:15px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card i{
+    font-size:28px;
+    color:#38bdf8;
+}
+
+.card:hover{
+    background:#334155;
+    transform:scale(1.03);
+}
+
+/* ===== DESTACADO (CENTRO) ===== */
+.full{
+    grid-column:1 / 3;
+    text-align:center;
     justify-content:center;
-    font-size:26px;
-    color:white;
-    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width:768px){
 
-    .sidebar{
-        width:60px;
+    .logo img{
+        width:140px;
     }
 
-    .main{
-        margin-left:60px;
+    .grid{
+        grid-template-columns:1fr;
     }
 
-    .menu a{
-        font-size:20px;
-    }
-
-    .overlay h2{
-        font-size:22px;
-    }
-
-    .overlay p{
-        font-size:14px;
+    .full{
+        grid-column:auto;
     }
 }
 </style>
@@ -152,47 +98,68 @@ body{
 
 <body>
 
-<!-- ===== MENU LATERAL ===== -->
-<div class="sidebar">
-
-    <img src="logo.png" alt="Logo">
-
-    <div class="menu">
-        <a href="#"><i class="fas fa-box"></i></a>
-        <a href="#"><i class="fas fa-money-bill-wave"></i></a>
-        <a href="#"><i class="fas fa-briefcase"></i></a>
-        <a href="#"><i class="fas fa-graduation-cap"></i></a>
-        <a href="#"><i class="fas fa-bullhorn"></i></a>
-        <a href="#"><i class="fas fa-newspaper"></i></a>
-        <a href="#"><i class="fas fa-language"></i></a>
-        <a href="#"><i class="fas fa-store"></i></a>
+<!-- ===== LOGO ===== -->
+<header class="header">
+    <div class="logo">
+        <img src="logo.png" alt="Cubanos Sin Fronteras">
     </div>
+</header>
 
-</div>
+<!-- ===== TITULO ===== -->
+<div class="titulo">Bienvenido al sitio</div>
 
 <!-- ===== CONTENIDO ===== -->
-<div class="main">
+<section class="grid">
 
-    <!-- PORTADA -->
-    <section class="brasil">
-        <div class="overlay">
-            <h2>Conectando cubanos en Brasil</h2>
-            <p>Oportunidades, servicios y comunidad sin fronteras</p>
-        </div>
-    </section>
-
-    <!-- CONTENIDO EXTRA PARA HACER LA PAGINA MÁS LARGA -->
-    <section class="content">
-        <h2>Servicios disponibles</h2>
-        <p>Aquí puedes agregar contenido, anuncios o información importante.</p>
-    </section>
-
+<!-- QUIENES SOMOS -->
+<div class="card full">
+    <i class="fas fa-users"></i>
+    <span>¿Quiénes somos?</span>
 </div>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/5350000000" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<!-- IZQUIERDA -->
+<div class="card">
+    <i class="fas fa-box"></i>
+    <span>Envíos a Cuba</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-money-bill-wave"></i>
+    <span>Recargas Cuba</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-briefcase"></i>
+    <span>Ofertas de trabajo</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-graduation-cap"></i>
+    <span>Cursos online</span>
+</div>
+
+<!-- DERECHA -->
+<div class="card">
+    <i class="fas fa-bullhorn"></i>
+    <span>¿Quieres que tu negocio esté aquí?</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-newspaper"></i>
+    <span>Noticias</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-language"></i>
+    <span>Traductores juramentados</span>
+</div>
+
+<div class="card">
+    <i class="fas fa-store"></i>
+    <span>Negocios de cubanos en tu región</span>
+</div>
+
+</section>
 
 </body>
 </html>
