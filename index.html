@@ -76,7 +76,7 @@ body{
     gap:20px;
 }
 
-/* MENU IZQUIERDO */
+/* MENU */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -106,17 +106,27 @@ body{
     padding:20px;
 }
 
-/* PUBLICIDAD DERECHA (AJUSTADA) */
+/* PUBLICIDAD */
 .publicidad{
     width:260px;
-    margin-right:30px; /* 👈 separada del borde */
-    margin-top:60px;   /* 👈 más abajo */
+    margin-right:30px;
+    margin-top:60px;
+    text-align:center;
 }
 
 .publicidad img{
     width:100%;
     border-radius:10px;
     box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* TEXTO PUBLICIDAD */
+.texto-publicidad{
+    margin-top:15px; /* 👈 separación */
+    font-size:16px;
+    font-weight:600;
+    color:#38bdf8;
+    text-shadow:0 0 8px rgba(56,189,248,0.7);
 }
 
 /* MOBILE */
@@ -134,8 +144,6 @@ body{
         width:100%;
         margin-right:0;
         margin-top:20px;
-        display:flex;
-        justify-content:center;
     }
 }
 </style>
@@ -181,6 +189,11 @@ body{
     <!-- PUBLICIDAD -->
     <div class="publicidad">
         <img src="anuncia tu negocio.png" alt="Publicidad">
+
+        <div class="texto-publicidad">
+            📢 Aquí le damos publicidad a tu negocio  
+            ¡Contáctanos!
+        </div>
     </div>
 
 </section>
