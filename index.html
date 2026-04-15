@@ -27,7 +27,6 @@ body{
     top:80px;
     left:20px;
 }
-
 .logo img{
     height:300px;
 }
@@ -92,60 +91,77 @@ body{
     border-radius:10px;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER PRO ===== */
 .footer{
-    margin-top:40px;
-    padding:40px 20px;
-    background:#020617;
+    margin-top:50px;
+    padding:50px 20px;
+    background:#000;
     text-align:center;
 }
 
-/* ICONOS */
+/* TITULO */
+.footer h2{
+    margin-bottom:25px;
+    color:#fff;
+    font-size:24px;
+}
+
+/* REDES */
 .redes{
     display:flex;
     justify-content:center;
     gap:30px;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
+/* CADA RED */
 .red{
     text-align:center;
 }
 
+/* ICONOS */
 .red i{
-    font-size:28px;
-    padding:15px;
+    font-size:26px;
+    padding:18px;
     border-radius:50%;
-    background:#1e293b;
+    background:#ff0000;
+    color:#fff;
+    box-shadow:0 0 15px rgba(255,0,0,0.8);
     transition:0.3s;
 }
 
 .red i:hover{
     transform:scale(1.2);
-    background:#38bdf8;
+    box-shadow:0 0 25px rgba(255,0,0,1);
 }
 
+/* CONTADORES */
 .contador{
-    margin-top:8px;
-    font-size:14px;
-    color:#38bdf8;
+    margin-top:10px;
+    font-size:15px;
+    color:#fff;
+    font-weight:bold;
 }
 
-/* BOTON EMAIL */
+/* BOTON EMAIL PRO */
 .email-btn{
-    margin-top:20px;
+    margin-top:25px;
     display:inline-block;
-    padding:12px 20px;
-    background:#38bdf8;
-    color:#000;
-    border-radius:8px;
+    padding:14px 25px;
+    background:#ff0000;
+    color:#fff;
+    border-radius:10px;
     text-decoration:none;
     font-weight:bold;
+    font-size:16px;
+    box-shadow:0 0 15px rgba(255,0,0,0.8);
     transition:0.3s;
 }
 
 .email-btn:hover{
-    background:#0ea5e9;
+    background:#cc0000;
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(255,0,0,1);
 }
 
 /* MOBILE */
@@ -190,17 +206,14 @@ body{
 
     <div class="publicidad">
         <img src="anuncia tu negocio.png">
-        <p style="margin-top:10px;color:#38bdf8;">
-            📢 Publicita tu negocio aquí
-        </p>
     </div>
 
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="footer">
 
-    <h2>Síguenos en redes</h2>
+    <h2>🔥 Síguenos y crece con nosotros</h2>
 
     <div class="redes">
 
@@ -221,9 +234,8 @@ body{
 
     </div>
 
-    <!-- BOTON EMAIL -->
     <a class="email-btn" href="mailto:zabalorodriguezmanuel@gmail.com">
-        📧 Contactar por Email
+        ✉️ Contactar por Email
     </a>
 
 </footer>
