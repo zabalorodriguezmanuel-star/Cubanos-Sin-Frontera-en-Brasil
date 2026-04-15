@@ -13,12 +13,15 @@ body{
     color:white;
 }
 
-/* ===== BANNER FULL REAL ===== */
+/* ===== BANNER PERFECTAMENTE AJUSTADO ===== */
 .header{
     width:100%;
-    height:200px;
-    background:url('banner.png') center center no-repeat;
-    background-size:cover; /* 🔥 AHORA SI LLENA TODO */
+    height:140px; /* 🔥 BAJAMOS ALTURA */
+    background-color:black;
+    background-image:url('banner.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:auto 100%; /* 🔥 CLAVE */
 }
 
 /* ===== ESTRUCTURA ===== */
@@ -81,7 +84,7 @@ body{
 }
 
 .header{
-    height:140px;
+    height:100px;
 }
 
 }
@@ -119,33 +122,15 @@ body{
 </div>
 </div>
 
-<div class="content hidden" id="noticias">
-<h2>Noticias</h2>
-<button onclick="volver()">Volver</button>
-</div>
-
-<div class="content hidden" id="negocios">
-<h2>Negocios</h2>
-<button onclick="volver()">Volver</button>
-</div>
-
 </div>
 
 <script>
 function mostrarNoticias(){
 document.getElementById("inicio").style.display="none";
-document.getElementById("noticias").style.display="flex";
 }
 
 function mostrarNegocios(){
 document.getElementById("inicio").style.display="none";
-document.getElementById("negocios").style.display="flex";
-}
-
-function volver(){
-document.getElementById("inicio").style.display="flex";
-document.getElementById("noticias").style.display="none";
-document.getElementById("negocios").style.display="none";
 }
 </script>
 
