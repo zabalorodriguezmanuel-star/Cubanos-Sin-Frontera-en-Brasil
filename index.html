@@ -31,7 +31,6 @@ body{
 
 .logo img{
     height:300px;
-    width:auto;
 }
 
 /* PORTADA */
@@ -45,22 +44,34 @@ body{
     justify-content:center;
 }
 
-/* TEXTO MEJORADO */
+/* TEXTO MODERNO */
 .overlay{
     background:rgba(0,0,0,0.6);
-    padding:30px;
-    border-radius:12px;
+    padding:35px;
+    border-radius:15px;
     text-align:center;
-    max-width:600px;
+    max-width:700px;
 }
 
+/* TITULO PRO */
 .overlay h2{
-    font-size:32px;
+    font-size:38px;
+    font-weight:700;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8),
+                 0 0 10px rgba(56,189,248,0.6);
 }
 
+/* VERIFICACION */
+.check{
+    color:#38bdf8;
+    text-shadow:0 0 8px rgba(56,189,248,0.8);
+}
+
+/* TEXTO */
 .overlay p{
-    margin-top:10px;
+    margin-top:15px;
     font-size:18px;
+    opacity:0.9;
 }
 
 /* SECCION */
@@ -70,7 +81,7 @@ body{
     gap:30px;
 }
 
-/* MENU IZQUIERDO */
+/* MENU */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -80,7 +91,6 @@ body{
     gap:15px;
 }
 
-/* BOTONES */
 .card{
     background:#1e293b;
     padding:12px;
@@ -107,10 +117,6 @@ body{
     max-width:800px;
 }
 
-.contenido h2{
-    margin-bottom:15px;
-}
-
 /* WHATSAPP */
 .whatsapp{
     position:fixed;
@@ -135,6 +141,14 @@ body{
         height:180px;
     }
 
+    .overlay h2{
+        font-size:24px;
+    }
+
+    .overlay p{
+        font-size:14px;
+    }
+
     .seccion{
         flex-direction:column;
     }
@@ -147,14 +161,6 @@ body{
 
     .card span{
         display:none;
-    }
-
-    .overlay h2{
-        font-size:22px;
-    }
-
-    .overlay p{
-        font-size:14px;
     }
 }
 </style>
@@ -170,7 +176,10 @@ body{
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>🌎 Cubanos en Brasil <span style="color:#38bdf8;">✔️ Sitio Oficial</span></h2>
+        <h2>
+            🌎 Cubanos en Brasil 
+            <span class="check">✔️ Sitio Oficial</span>
+        </h2>
         <p>
             Tu punto de encuentro en Brasil 🇧🇷  
             Servicios, empleo, noticias y comunidad cubana en un solo lugar.
@@ -181,9 +190,7 @@ body{
 <!-- SECCION -->
 <section class="seccion">
 
-    <!-- MENU IZQUIERDO -->
     <div class="menu-izquierdo">
-
         <div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
         <div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
         <div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
@@ -191,10 +198,8 @@ body{
         <div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
         <div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
         <div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
-
     </div>
 
-    <!-- CONTENIDO -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
         <p>
