@@ -13,87 +13,94 @@ body{
     color:white;
 }
 
-/* ===== BANNER PERFECTO ===== */
+/* ===== BANNER SIN RECORTE ===== */
 .header{
     width:100%;
-    height:180px;
     background:black;
-    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
+    padding:10px 0;
 }
 
 .header img{
     width:100%;
-    height:100%;
-    object-fit:cover;
+    height:auto; /* 🔥 NO RECORTA */
+    max-height:180px;
+    object-fit:contain; /* 🔥 MUESTRA TODO */
 }
 
 /* ===== ESTRUCTURA ===== */
 .main{
     display:flex;
-    min-height:calc(100vh - 180px);
+    flex-wrap:wrap;
 }
 
-/* ===== SIDEBAR ===== */
+/* ===== MENU ===== */
 .sidebar{
     width:260px;
-    padding:30px 15px;
+    padding:20px;
 }
 
-/* ===== BOTONES PRO ===== */
+/* ===== BOTONES ===== */
 .btn{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:18px;
-    padding:14px;
+    display:block;
+    margin-bottom:15px;
+    padding:12px;
     border-radius:10px;
     text-decoration:none;
     color:white;
     font-weight:bold;
     background: linear-gradient(45deg,#00c3ff,#00ff95,#ff2e2e);
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateX(5px) scale(1.03);
-    box-shadow:0 0 15px rgba(0,255,200,0.8);
 }
 
 /* ===== CONTENIDO ===== */
 .content{
     flex:1;
-    padding:100px 120px;
+    padding:40px;
     display:flex;
     justify-content:center;
-    align-items:flex-start;
 }
 
 /* ===== BOX ===== */
 .box{
     background: rgba(0,0,0,0.7);
-    padding:35px;
-    border-radius:15px;
+    padding:25px;
+    border-radius:12px;
     max-width:500px;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-/* ===== PANTALLAS ===== */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px){
+
+.main{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.btn{
+    width:90%;
+    text-align:center;
+}
+
+.content{
+    padding:20px;
+}
+
+.header img{
+    max-height:120px;
+}
+
+}
+
 .hidden{
     display:none;
-}
-
-/* ===== BOTON VOLVER ===== */
-.back{
-    padding:10px 20px;
-    border:none;
-    border-radius:6px;
-    background:white;
-    color:black;
-    cursor:pointer;
 }
 </style>
 </head>
@@ -109,44 +116,32 @@ body{
 
 <!-- MENU -->
 <div class="sidebar">
-
-<a class="btn" href="https://facebook.com" target="_blank">📦 Paquetería a Cuba</a>
-<a class="btn" href="https://wa.me/5599999999999" target="_blank">💸 Envío de remesas</a>
-<a class="btn" href="https://www.floripanazuera.com" target="_blank">💼 Ofertas de trabajo</a>
-<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">🎓 Cursos online</a>
-<a class="btn" href="#">📢 Anuncia tu negocio aquí</a>
-<a class="btn" onclick="mostrarNoticias()">📰 Noticias</a>
-<a class="btn" href="#">🌐 Traductor juramentado</a>
-<a class="btn" onclick="mostrarNegocios()">🏪 Negocios de cubanos en tu región</a>
-
+<a class="btn" href="https://facebook.com" target="_blank">Paquetería a Cuba</a>
+<a class="btn" href="https://wa.me/5599999999999" target="_blank">Envío de remesas</a>
+<a class="btn" href="https://www.floripanazuera.com" target="_blank">Ofertas de trabajo</a>
+<a class="btn" href="https://zabalorodriguezmanuel.hotmart.host/link-in-bio-5b13d0e4-a10d-4f26-ab0b-d6e0a382202b" target="_blank">Cursos online</a>
+<a class="btn" href="#">Anuncia tu negocio aquí</a>
+<a class="btn" onclick="mostrarNoticias()">Noticias</a>
+<a class="btn" href="#">Traductor juramentado</a>
+<a class="btn" onclick="mostrarNegocios()">Negocios de cubanos en tu región</a>
 </div>
 
 <!-- CONTENIDO -->
 <div class="content" id="inicio">
-
 <div class="box">
 <h2>¿Quiénes somos?</h2>
 <p>Cubanos sin frontera en Brasil sitio único y oficial de los cubanos en Brasil</p>
 </div>
-
 </div>
 
-<!-- NOTICIAS -->
 <div class="content hidden" id="noticias">
-<div>
-<button class="back" onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">Volver</button>
 <h2>Noticias</h2>
-<p>Aquí publicarás noticias próximamente</p>
-</div>
 </div>
 
-<!-- NEGOCIOS -->
 <div class="content hidden" id="negocios">
-<div>
-<button class="back" onclick="volver()">⬅ Volver</button>
+<button onclick="volver()">Volver</button>
 <h2>Negocios</h2>
-<p>Aquí agregarás los negocios por región</p>
-</div>
 </div>
 
 </div>
