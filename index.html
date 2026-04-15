@@ -3,124 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tu Sitio Web</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Cubanos Sin Fronteras</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background:#0f172a;
-    color:#fff;
+    background:black;
 }
 
-/* ====== BANNER ====== */
+/* ===== BANNER ===== */
 .banner{
     width:100%;
     height:100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');
-    background-size:cover;
-    background-position:center;
     display:flex;
     align-items:center;
     justify-content:center;
-    text-align:center;
 }
 
-.banner h1{
-    font-size:50px;
+/* IMAGEN */
+.banner img{
+    width:80%;
+    max-width:900px;
+    height:auto;
 }
 
-.banner p{
-    margin-top:10px;
-    font-size:18px;
-}
-
-/* ===== BOTONES ===== */
-.container{
-    padding:40px;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
-    cursor:pointer;
-}
-
-.card:hover{
-    background:#334155;
-    transform:scale(1.05);
-}
-
-.card h3{
-    font-size:18px;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:30px;
-    color:white;
-    text-decoration:none;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-    0%{transform:scale(1);}
-    50%{transform:scale(1.1);}
-    100%{transform:scale(1);}
+/* RESPONSIVE */
+@media (max-width:768px){
+    .banner img{
+        width:95%;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== BANNER ===== -->
 <section class="banner">
-    <div>
-        <h1>Tu Negocio Aquí</h1>
-        <p>Diseño web profesional y servicios para tu crecimiento</p>
-    </div>
+    <img src="banner.png" alt="Cubanos Sin Fronteras">
 </section>
-
-<!-- ===== BOTONES ===== -->
-<section class="container">
-
-<div class="card"><h3>Paquetería a Cuba</h3></div>
-<div class="card"><h3>Envío de Remesas</h3></div>
-<div class="card"><h3>Ofertas de Trabajo</h3></div>
-<div class="card"><h3>Cursos Online</h3></div>
-<div class="card"><h3>Anuncia tu negocio aquí</h3></div>
-<div class="card"><h3>Noticias</h3></div>
-<div class="card"><h3>Traductor Juramentado</h3></div>
-<div class="card"><h3>Negocios de Cubanos</h3></div>
-
-</section>
-
-<!-- ===== WHATSAPP ===== -->
-<a class="whatsapp" href="https://wa.me/5350000000" target="_blank">💬</a>
 
 </body>
 </html>
