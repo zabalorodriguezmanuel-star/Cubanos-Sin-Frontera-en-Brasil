@@ -20,7 +20,19 @@ body{
     color:#fff;
 }
 
-/* ===== PORTADA BRASIL ===== */
+/* ===== HEADER LOGO ===== */
+.header{
+    position:absolute;
+    top:10px;
+    left:20px;
+    z-index:10;
+}
+
+.header img{
+    width:180px;
+}
+
+/* ===== PORTADA ===== */
 .brasil{
     width:100%;
     min-height:100vh;
@@ -32,7 +44,6 @@ body{
     padding:20px;
 }
 
-/* TEXTO ENCIMA */
 .overlay{
     background:rgba(0,0,0,0.6);
     padding:25px;
@@ -100,11 +111,11 @@ body{
     100%{transform:scale(1);}
 }
 
-/* ===== MOBILE AJUSTES ===== */
+/* ===== MOBILE ===== */
 @media (max-width:768px){
 
-    .overlay{
-        padding:20px;
+    .header img{
+        width:120px;
     }
 
     .overlay h2{
@@ -118,15 +129,16 @@ body{
     .container{
         grid-template-columns: repeat(2,1fr);
     }
-
-    .card h3{
-        font-size:14px;
-    }
 }
 </style>
 </head>
 
 <body>
+
+<!-- ===== LOGO ===== -->
+<div class="header">
+    <img src="logo.png" alt="Cubanos Sin Fronteras">
+</div>
 
 <!-- ===== PORTADA ===== -->
 <section class="brasil">
