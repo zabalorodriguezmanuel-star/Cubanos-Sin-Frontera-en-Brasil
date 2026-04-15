@@ -26,36 +26,29 @@ body{
     position:fixed;
     top:0;
     width:100%;
+    height:70px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:10px 30px;
     background:rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
     z-index:1000;
 }
 
 .logo img{
-    width:220px;
-}
-
-.nav a{
-    color:#fff;
-    margin-left:20px;
-    text-decoration:none;
-    font-size:14px;
+    width:200px;
 }
 
 /* ===== PORTADA ===== */
 .brasil{
     width:100%;
-    min-height:100vh;
+    height:100vh;
     background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') no-repeat center;
     background-size:cover;
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:100px 20px 20px;
+    padding-top:70px;
 }
 
 .overlay{
@@ -63,42 +56,54 @@ body{
     padding:25px;
     border-radius:12px;
     text-align:center;
-    max-width:500px;
 }
 
-/* ===== MENU DERECHO ===== */
-.menu-derecho{
-    position:fixed;
-    top:120px;
-    right:10px;
+/* ===== SECCION SIGUIENTE ===== */
+.seccion{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ===== MENU IZQUIERDO ===== */
+.menu-izquierdo{
+    width:220px;
+    background:#020617;
+    padding:20px;
     display:flex;
     flex-direction:column;
-    gap:10px;
-    z-index:999;
+    gap:15px;
 }
 
 /* BOTONES */
 .card{
     background:#1e293b;
-    padding:10px 12px;
+    padding:12px;
     border-radius:8px;
     display:flex;
     align-items:center;
-    gap:8px;
-    font-size:13px;
+    gap:10px;
+    font-size:14px;
     cursor:pointer;
     transition:0.3s;
-    white-space:nowrap;
 }
 
 .card i{
-    font-size:16px;
     color:#38bdf8;
 }
 
 .card:hover{
     background:#334155;
-    transform:translateX(-5px);
+    transform:translateX(5px);
+}
+
+/* ===== CONTENIDO ===== */
+.contenido{
+    flex:1;
+    padding:40px;
+}
+
+.contenido h2{
+    margin-bottom:20px;
 }
 
 /* ===== WHATSAPP ===== */
@@ -115,22 +120,23 @@ body{
     justify-content:center;
     font-size:26px;
     color:white;
-    text-decoration:none;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width:768px){
 
-    .nav{
-        display:none;
+    .seccion{
+        flex-direction:column;
     }
 
-    .logo img{
-        width:160px;
+    .menu-izquierdo{
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
     }
 
     .card span{
-        display:none; /* solo iconos en móvil */
+        display:none;
     }
 }
 </style>
@@ -143,15 +149,9 @@ body{
     <div class="logo">
         <img src="logo.png">
     </div>
-    <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#">Servicios</a>
-        <a href="#">Noticias</a>
-        <a href="#">Contacto</a>
-    </nav>
 </header>
 
-<!-- PORTADA -->
+<!-- PORTADA (NO TOCAR) -->
 <section class="brasil">
     <div class="overlay">
         <h2>Conectando cubanos en Brasil</h2>
@@ -159,19 +159,30 @@ body{
     </div>
 </section>
 
-<!-- MENU LATERAL DERECHO -->
-<div class="menu-derecho">
+<!-- SECCION SIGUIENTE (AQUI VA EL MENU) -->
+<section class="seccion">
 
-<div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
-<div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
-<div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
-<div class="card"><i class="fas fa-graduation-cap"></i><span>Cursos online</span></div>
-<div class="card"><i class="fas fa-bullhorn"></i><span>Anuncia tu negocio</span></div>
-<div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
-<div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
-<div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
+    <!-- MENU IZQUIERDO -->
+    <div class="menu-izquierdo">
 
-</div>
+        <div class="card"><i class="fas fa-box"></i><span>Envíos a Cuba</span></div>
+        <div class="card"><i class="fas fa-money-bill-wave"></i><span>Recargas Cuba</span></div>
+        <div class="card"><i class="fas fa-briefcase"></i><span>Ofertas de trabajo</span></div>
+        <div class="card"><i class="fas fa-graduation-cap"></i><span>Cursos online</span></div>
+        <div class="card"><i class="fas fa-bullhorn"></i><span>Anuncia tu negocio</span></div>
+        <div class="card"><i class="fas fa-newspaper"></i><span>Noticias</span></div>
+        <div class="card"><i class="fas fa-language"></i><span>Traductor juramentado</span></div>
+        <div class="card"><i class="fas fa-store"></i><span>Negocios en tu región</span></div>
+
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="contenido">
+        <h2>Contenido del sitio</h2>
+        <p>Aquí puedes colocar información, anuncios o lo que quieras mostrar.</p>
+    </div>
+
+</section>
 
 <!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5350000000" target="_blank">
