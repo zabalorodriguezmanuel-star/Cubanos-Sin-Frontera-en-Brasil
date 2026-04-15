@@ -21,16 +21,16 @@ body{
     color:#fff;
 }
 
-/* ===== LOGO SOBRE IMAGEN ===== */
+/* ===== LOGO ===== */
 .logo{
     position:absolute;
-    top:20px;
+    top:50px; /* 👈 separado del borde */
     left:20px;
     z-index:10;
 }
 
 .logo img{
-    height:180px; /* 👈 tamaño que pediste */
+    height:220px; /* 👈 más grande */
     width:auto;
 }
 
@@ -108,7 +108,7 @@ body{
 /* MOBILE */
 @media (max-width:768px){
     .logo img{
-        height:120px;
+        height:150px;
     }
 
     .seccion{
@@ -130,7 +130,7 @@ body{
 
 <body>
 
-<!-- LOGO (SIN HEADER) -->
+<!-- LOGO -->
 <div class="logo">
     <img src="logo.png" alt="Cubanos Sin Fronteras">
 </div>
