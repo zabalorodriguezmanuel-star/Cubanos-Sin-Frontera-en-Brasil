@@ -21,54 +21,16 @@ body{
     color:#fff;
 }
 
-/* ===== LOGO ANIMADO ===== */
+/* LOGO */
 .logo{
     position:absolute;
     top:80px;
     left:20px;
     z-index:10;
-    opacity:0;
-    transform:translateY(-30px);
-    animation:logoEntrada 1.5s ease forwards;
-}
-
-@keyframes logoEntrada{
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 .logo img{
-    height:300px;
-    animation:logoGlow 3s infinite;
-}
-
-@keyframes logoGlow{
-    0%{filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));}
-    50%{filter:drop-shadow(0 0 20px rgba(56,189,248,0.9));}
-    100%{filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));}
-}
-
-/* ===== CHECK PROFESIONAL ===== */
-.check{
-    display:inline-block;
-    width:18px;
-    height:18px;
-    background:#1da1f2;
-    border-radius:50%;
-    position:relative;
-    margin-left:6px;
-}
-
-.check::after{
-    content:"✔";
-    color:#fff;
-    font-size:12px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
+    height:260px;
 }
 
 /* PORTADA */
@@ -82,9 +44,16 @@ body{
 
 .overlay{
     background:rgba(0,0,0,0.6);
-    padding:30px;
+    padding:25px;
     border-radius:15px;
     text-align:center;
+}
+
+.check{
+    background:#1da1f2;
+    border-radius:50%;
+    padding:3px 7px;
+    margin-left:5px;
 }
 
 /* SECCION */
@@ -97,8 +66,6 @@ body{
 /* MENU */
 .menu-izquierdo{
     width:220px;
-    background:#020617;
-    padding:20px;
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -106,12 +73,11 @@ body{
 
 .card{
     background:#1e293b;
-    padding:12px;
-    border-radius:8px;
+    padding:15px;
+    border-radius:10px;
     display:flex;
     gap:10px;
-    text-decoration:none;
-    color:#fff;
+    align-items:center;
 }
 
 .card i{
@@ -126,8 +92,6 @@ body{
 /* PUBLICIDAD */
 .publicidad{
     width:260px;
-    margin-right:30px;
-    margin-top:60px;
     text-align:center;
 }
 
@@ -137,65 +101,53 @@ body{
 }
 
 .texto-publicidad{
-    margin-top:15px;
+    margin-top:10px;
     color:#38bdf8;
-    font-weight:bold;
 }
 
 /* FOOTER */
 .footer{
-    margin-top:50px;
-    padding:50px 20px;
     background:#000;
+    padding:40px;
     text-align:center;
 }
 
 .redes{
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:20px;
 }
 
 .red{
-    position:relative;
-}
-
-.red i{
-    font-size:26px;
-    padding:18px;
+    background:red;
+    padding:15px;
     border-radius:50%;
-    background:#ff0000;
     color:#fff;
 }
 
-/* ===== FIX MÓVIL ===== */
+/* ===== MOBILE PERFECTO ===== */
 @media (max-width:768px){
 
     .seccion{
-        flex-direction:row;
+        flex-direction:column;
     }
 
     .menu-izquierdo{
-        width:30%;
-    }
-
-    .contenido{
-        width:40%;
+        width:100%;
     }
 
     .publicidad{
-        width:30%;
-        margin-top:0;
+        width:100%;
     }
 
     .logo{
-        top:40px;
         left:50%;
         transform:translateX(-50%);
+        top:40px;
     }
 
     .logo img{
-        height:160px;
+        height:140px;
     }
 
 }
@@ -204,83 +156,50 @@ body{
 
 <body>
 
-<!-- LOGO -->
 <div class="logo">
     <img src="logo.png">
 </div>
 
-<!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>
-            🌎 Cubanos en Brasil <span class="check"></span> Sitio Oficial
-        </h2>
-        <p>Servicios, empleo, noticias y una comunidad cubana.</p>
+        <h2>🌎 Cubanos en Brasil <span class="check">✔</span> Sitio Oficial</h2>
+        <p>Servicios, empleo, noticias y comunidad cubana.</p>
     </div>
 </section>
 
-<!-- SECCION -->
 <section class="seccion">
 
-    <div class="menu-izquierdo">
+<div class="menu-izquierdo">
 
-        <div class="card"><i class="fas fa-box"></i> Envíos de Paquetes a Cuba</div>
+<div class="card"><i class="fas fa-box"></i> Envíos a Cuba</div>
+<div class="card"><i class="fas fa-money-bill"></i> Remesas</div>
+<div class="card"><i class="fas fa-briefcase"></i> Trabajo</div>
+<div class="card"><i class="fas fa-graduation-cap"></i> Cursos</div>
+<div class="card"><i class="fas fa-newspaper"></i> Noticias</div>
+<div class="card"><i class="fas fa-language"></i> Traductor</div>
 
-        <div class="card"><i class="fas fa-money-bill-wave"></i> Envios de remesas</div>
+</div>
 
-        <a href="https://www.floripanazuera.com" target="_blank" class="card">
-            <i class="fas fa-briefcase"></i> Ofertas de Trabajo
-        </a>
+<div class="contenido">
+<h2>Contenido del sitio</h2>
+<p>Aquí puedes colocar tu información.</p>
+</div>
 
-        <div class="card"><i class="fas fa-graduation-cap"></i> Cursos online</div>
-
-        <div class="card"><i class="fas fa-newspaper"></i> Noticias</div>
-
-        <div class="card"><i class="fas fa-language"></i> Traductor juramentado</div>
-
-        <div class="card"><i class="fas fa-store"></i> Negocios de Cubanos en tu Región</div>
-
-    </div>
-
-    <div class="contenido">
-        <h2>Contenido del sitio</h2>
-        <p>Aquí puedes colocar la descripción de tu sitio.</p>
-    </div>
-
-    <div class="publicidad">
-        <img src="anuncia tu negocio.png">
-        <div class="texto-publicidad">
-            📢 Aquí le damos publicidad a tu negocio ¡Contáctanos por E-mail y dejanos tu WhatsApp!
-        </div>
-    </div>
+<div class="publicidad">
+<img src="anuncia tu negocio.png">
+<div class="texto-publicidad">
+📢 Publicita tu negocio con nosotros
+</div>
+</div>
 
 </section>
 
 <footer class="footer">
-
-    <div class="redes">
-
-        <div class="red">
-            <i class="fab fa-facebook-f"></i>
-            <div class="contador">12K</div>
-        </div>
-
-        <div class="red">
-            <i class="fab fa-instagram"></i>
-            <div class="contador">8.5K</div>
-        </div>
-
-        <div class="red">
-            <i class="fab fa-tiktok"></i>
-            <div class="contador">15K</div>
-        </div>
-
-    </div>
-
-    <a class="email-btn" href="mailto:zabalorodriguezmanuel@gmail.com">
-        ✉️ Nuestro Email
-    </a>
-
+<div class="redes">
+<div class="red"><i class="fab fa-facebook-f"></i></div>
+<div class="red"><i class="fab fa-instagram"></i></div>
+<div class="red"><i class="fab fa-tiktok"></i></div>
+</div>
 </footer>
 
 </body>
