@@ -21,14 +21,41 @@ body{
     color:#fff;
 }
 
-/* LOGO */
+/* ===== LOGO ANIMADO ===== */
 .logo{
     position:absolute;
     top:80px;
     left:20px;
+    z-index:10;
+
+    opacity:0;
+    transform:translateY(-30px);
+    animation:logoEntrada 1.5s ease forwards;
 }
+
+@keyframes logoEntrada{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 .logo img{
     height:300px;
+    width:auto;
+    animation:logoGlow 3s ease-in-out infinite;
+    transition:0.3s;
+}
+
+@keyframes logoGlow{
+    0%{filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));}
+    50%{filter:drop-shadow(0 0 20px rgba(56,189,248,0.9));}
+    100%{filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));}
+}
+
+.logo img:hover{
+    transform:scale(1.1);
+    filter:drop-shadow(0 0 30px rgba(56,189,248,1));
 }
 
 /* PORTADA */
@@ -54,7 +81,7 @@ body{
     gap:20px;
 }
 
-/* MENU (SIN CAMBIOS) */
+/* MENU */
 .menu-izquierdo{
     width:220px;
     background:#020617;
@@ -103,7 +130,7 @@ body{
     font-weight:bold;
 }
 
-/* ===== FOOTER RESTAURADO ===== */
+/* FOOTER */
 .footer{
     margin-top:50px;
     padding:50px 20px;
@@ -132,7 +159,6 @@ body{
     box-shadow:0 0 15px rgba(255,0,0,0.8);
 }
 
-/* VERIFICADO */
 .verificado{
     position:absolute;
     top:-5px;
@@ -150,7 +176,6 @@ body{
     color:#fff;
 }
 
-/* BOTON EMAIL */
 .email-btn{
     padding:14px 25px;
     background:#ff0000;
@@ -165,6 +190,10 @@ body{
 @media (max-width:768px){
     .seccion{
         flex-direction:column;
+    }
+
+    .logo img{
+        height:180px;
     }
 }
 </style>
@@ -188,14 +217,12 @@ body{
 <!-- SECCION -->
 <section class="seccion">
 
-    <!-- MENU ORIGINAL -->
     <div class="menu-izquierdo">
 
         <div class="card"><i class="fas fa-box"></i> Envíos de Paquetes a Cuba</div>
 
         <div class="card"><i class="fas fa-money-bill-wave"></i> Envios de remesas</div>
 
-        <!-- SOLO ESTE TIENE LINK -->
         <a href="https://www.floripanazuera.com" target="_blank" class="card">
             <i class="fas fa-briefcase"></i> Ofertas de Trabajo
         </a>
@@ -210,13 +237,11 @@ body{
 
     </div>
 
-    <!-- CONTENIDO -->
     <div class="contenido">
         <h2>Contenido del sitio</h2>
         <p>Aquí puedes colocar la descripción de tu sitio.</p>
     </div>
 
-    <!-- PUBLICIDAD -->
     <div class="publicidad">
         <img src="anuncia tu negocio.png">
         <div class="texto-publicidad">
@@ -226,10 +251,7 @@ body{
 
 </section>
 
-<!-- FOOTER CON REDES RESTAURADAS -->
 <footer class="footer">
-
-
 
     <div class="redes">
 
