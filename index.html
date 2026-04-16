@@ -27,7 +27,6 @@ body{
     top:80px;
     left:20px;
     z-index:10;
-
     opacity:0;
     transform:translateY(-30px);
     animation:logoEntrada 1.5s ease forwards;
@@ -42,9 +41,7 @@ body{
 
 .logo img{
     height:300px;
-    width:auto;
-    animation:logoGlow 3s ease-in-out infinite;
-    transition:0.3s;
+    animation:logoGlow 3s infinite;
 }
 
 @keyframes logoGlow{
@@ -53,12 +50,28 @@ body{
     100%{filter:drop-shadow(0 0 5px rgba(56,189,248,0.4));}
 }
 
-.logo img:hover{
-    transform:scale(1.1);
-    filter:drop-shadow(0 0 30px rgba(56,189,248,1));
+/* ===== CHECK PROFESIONAL ===== */
+.check{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    background:#1da1f2;
+    border-radius:50%;
+    position:relative;
+    margin-left:6px;
 }
 
-/* ===== PORTADA ===== */
+.check::after{
+    content:"✔";
+    color:#fff;
+    font-size:12px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* PORTADA */
 .brasil{
     height:100vh;
     background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') center/cover;
@@ -74,7 +87,7 @@ body{
     text-align:center;
 }
 
-/* ===== SECCION ===== */
+/* SECCION */
 .seccion{
     display:flex;
     padding:30px;
@@ -97,7 +110,6 @@ body{
     border-radius:8px;
     display:flex;
     gap:10px;
-    cursor:pointer;
     text-decoration:none;
     color:#fff;
 }
@@ -130,7 +142,7 @@ body{
     font-weight:bold;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer{
     margin-top:50px;
     padding:50px 20px;
@@ -142,12 +154,10 @@ body{
     display:flex;
     justify-content:center;
     gap:30px;
-    margin-bottom:30px;
 }
 
 .red{
     position:relative;
-    text-align:center;
 }
 
 .red i{
@@ -156,44 +166,28 @@ body{
     border-radius:50%;
     background:#ff0000;
     color:#fff;
-    box-shadow:0 0 15px rgba(255,0,0,0.8);
 }
 
-.verificado{
-    position:absolute;
-    top:-5px;
-    right:-5px;
-    background:#1da1f2;
-    color:#fff;
-    font-size:10px;
-    padding:5px;
-    border-radius:50%;
-}
-
-.contador{
-    margin-top:10px;
-    font-weight:bold;
-    color:#fff;
-}
-
-.email-btn{
-    padding:14px 25px;
-    background:#ff0000;
-    color:#fff;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 0 15px rgba(255,0,0,0.8);
-}
-
-/* ===== MOBILE ===== */
+/* ===== FIX MÓVIL ===== */
 @media (max-width:768px){
 
     .seccion{
-        flex-direction:column;
+        flex-direction:row;
     }
 
-    /* 🔥 LOGO FIX MOBILE */
+    .menu-izquierdo{
+        width:30%;
+    }
+
+    .contenido{
+        width:40%;
+    }
+
+    .publicidad{
+        width:30%;
+        margin-top:0;
+    }
+
     .logo{
         top:40px;
         left:50%;
@@ -218,7 +212,9 @@ body{
 <!-- PORTADA -->
 <section class="brasil">
     <div class="overlay">
-        <h2>🌎 Cubanos en Brasil ✔️ Sitio Oficial</h2>
+        <h2>
+            🌎 Cubanos en Brasil <span class="check"></span> Sitio Oficial
+        </h2>
         <p>Servicios, empleo, noticias y una comunidad cubana.</p>
     </div>
 </section>
@@ -266,19 +262,16 @@ body{
 
         <div class="red">
             <i class="fab fa-facebook-f"></i>
-            <div class="verificado">✔</div>
             <div class="contador">12K</div>
         </div>
 
         <div class="red">
             <i class="fab fa-instagram"></i>
-            <div class="verificado">✔</div>
             <div class="contador">8.5K</div>
         </div>
 
         <div class="red">
             <i class="fab fa-tiktok"></i>
-            <div class="verificado">✔</div>
             <div class="contador">15K</div>
         </div>
 
