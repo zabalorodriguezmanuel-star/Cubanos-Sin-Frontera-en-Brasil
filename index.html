@@ -58,7 +58,7 @@ body{
     filter:drop-shadow(0 0 30px rgba(56,189,248,1));
 }
 
-/* PORTADA */
+/* ===== PORTADA ===== */
 .brasil{
     height:100vh;
     background:url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325') center/cover;
@@ -74,7 +74,7 @@ body{
     text-align:center;
 }
 
-/* SECCION */
+/* ===== SECCION ===== */
 .seccion{
     display:flex;
     padding:30px;
@@ -130,7 +130,7 @@ body{
     font-weight:bold;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer{
     margin-top:50px;
     padding:50px 20px;
@@ -186,15 +186,24 @@ body{
     box-shadow:0 0 15px rgba(255,0,0,0.8);
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 @media (max-width:768px){
+
     .seccion{
         flex-direction:column;
     }
 
-    .logo img{
-        height:180px;
+    /* 🔥 LOGO FIX MOBILE */
+    .logo{
+        top:40px;
+        left:50%;
+        transform:translateX(-50%);
     }
+
+    .logo img{
+        height:160px;
+    }
+
 }
 </style>
 </head>
